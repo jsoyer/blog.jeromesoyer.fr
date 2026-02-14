@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tooling on 🧠 The Least Privilege Life ⭐</title>
+    <link>/categories/tooling/</link>
+    <description>Recent content in Tooling on 🧠 The Least Privilege Life ⭐</description>
+    <generator>Hugo -- 0.155.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 14 Feb 2026 10:00:00 +0100</lastBuildDate>
+    <atom:link href="/categories/tooling/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unleash the Cat: Controlling Kitty Terminal with Raycast</title>
+      <link>/posts/raycast-kitty/</link>
+      <pubDate>Sat, 14 Feb 2026 10:00:00 +0100</pubDate>
+      <guid>/posts/raycast-kitty/</guid>
+      <description>How I turned my terminal management from a chaotic mess into a purring productivity machine using Raycast and Kitty.</description>
+    </item>
+  </channel>
+</rss>

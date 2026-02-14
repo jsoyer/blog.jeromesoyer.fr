@@ -2,10 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>🧠 The Least Privilege Life ⭐</title>
-    <link>//localhost:1313/</link>
+    <link>/</link>
     <description>Recent content on 🧠 The Least Privilege Life ⭐</description>
     <generator>Hugo -- 0.155.3</generator>
     <language>en-us</language>
-    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Feb 2026 11:00:00 +0100</lastBuildDate>
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dotfiles Revolution: How I Manage My Entire dev Environment with Chezmoi</title>
+      <link>/posts/dotfiles/</link>
+      <pubDate>Sat, 14 Feb 2026 11:00:00 +0100</pubDate>
+      <guid>/posts/dotfiles/</guid>
+      <description>A comprehensive guide to cross-platform dotfiles management</description>
+    </item>
+    <item>
+      <title>Unleash the Cat: Controlling Kitty Terminal with Raycast</title>
+      <link>/posts/raycast-kitty/</link>
+      <pubDate>Sat, 14 Feb 2026 10:00:00 +0100</pubDate>
+      <guid>/posts/raycast-kitty/</guid>
+      <description>How I turned my terminal management from a chaotic mess into a purring productivity machine using Raycast and Kitty.</description>
+    </item>
   </channel>
 </rss>

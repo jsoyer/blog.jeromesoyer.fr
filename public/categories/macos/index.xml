@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>MacOS on 🧠 The Least Privilege Life ⭐</title>
+    <link>/categories/macos/</link>
+    <description>Recent content in MacOS on 🧠 The Least Privilege Life ⭐</description>
+    <generator>Hugo -- 0.155.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 14 Feb 2026 11:00:00 +0100</lastBuildDate>
+    <atom:link href="/categories/macos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dotfiles Revolution: How I Manage My Entire dev Environment with Chezmoi</title>
+      <link>/posts/dotfiles/</link>
+      <pubDate>Sat, 14 Feb 2026 11:00:00 +0100</pubDate>
+      <guid>/posts/dotfiles/</guid>
+      <description>A comprehensive guide to cross-platform dotfiles management</description>
+    </item>
+  </channel>
+</rss>

@@ -1,7 +1,7 @@
 ---
 title: "Wipey: I Built a macOS App Because I Kept Accidentally Sending Emails While Cleaning My Keyboard"
 date: 2026-03-09T21:00:00+01:00
-draft: true
+draft: false
 author: "Jerome Soyer"
 description: "A macOS app that locks keyboard and trackpad during cleaning. Built in Swift, distributed via Homebrew."
 categories: ["macOS", "Engineering"]

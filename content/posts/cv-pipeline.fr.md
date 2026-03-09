@@ -1,7 +1,7 @@
 ---
 title: "J'ai construit un pipeline de candidature IA et j'ai postulé chez Anthropic avec"
 date: 2026-03-09T16:00:00+01:00
-draft: true
+draft: false
 author: "Jerome Soyer"
 description: "Comment j'ai sur-ingéniérisé ma recherche d'emploi avec un pipeline IA piloté par YAML, 67 scripts et 14 workflows CI/CD. Et pourquoi je ne le regrette pas une seconde."
 categories: ["Engineering", "AI"]

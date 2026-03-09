@@ -1,7 +1,7 @@
 ---
 title: "Atuin Self-Hosted: Encrypted Shell History Sync Across All Your Machines"
 date: 2026-03-09T19:00:00+01:00
-draft: true
+draft: false
 author: "Jerome Soyer"
 description: "Run your own encrypted shell history server on Raspberry Pi for seamless command sync"
 categories: ["Homelab", "Tooling"]

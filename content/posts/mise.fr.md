@@ -1,7 +1,7 @@
 ---
 title: "mise : un seul outil pour remplacer nvm, rbenv, pyenv et tous les autres"
 date: 2026-03-09T20:00:00+01:00
-draft: true
+draft: false
 author: "Jerome Soyer"
 description: "mise consolide tous les gestionnaires de versions de langage dans un seul outil avec config .mise.toml."
 categories: ["Tooling", "DevOps"]

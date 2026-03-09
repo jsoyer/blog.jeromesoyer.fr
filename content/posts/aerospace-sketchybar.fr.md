@@ -1,7 +1,7 @@
 ---
 title: "Aerospace + Sketchybar : Mon setup macOS entièrement au clavier"
 date: 2026-03-09T18:00:00+01:00
-draft: true
+draft: false
 author: "Jerome Soyer"
 description: "Un gestionnaire de fenêtres en pavage + barre de menu scriptable pour une productivité macOS au clavier"
 categories: ["macOS", "Tooling"]

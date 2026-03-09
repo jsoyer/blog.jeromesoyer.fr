@@ -1,7 +1,7 @@
 ---
 title: "Framework Laptop + Fedora Atomic : le cas pour un OS immuable"
 date: 2026-03-09T23:00:00+01:00
-draft: true
+draft: false
 author: "Jerome Soyer"
 description: "Pourquoi les distributions Linux immuables comptent. Faire tourner Fedora Atomic sur Framework pour stabilité et flexibilité."
 categories: ["Linux", "Tooling"]

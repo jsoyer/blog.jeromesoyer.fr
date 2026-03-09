@@ -8,33 +8,68 @@ showtoc: false
 
 ## Hey, I'm Jerome.
 
-I'm a developer who cares deeply about the craft of the working environment — the shell, the editor, the tools, and the automation that ties it all together.
+By day, I lead a team of presales engineers at **[Varonis](https://www.varonis.com)** — the kind of company that spends its existence making sure attackers can't access things they're not supposed to. The irony of naming this blog "The Least Privilege Life" is entirely intentional.
 
-I've spent years perfecting my setup across macOS, Fedora, and Raspberry Pi. At some point I decided to write it down.
-
-### What this blog is about
-
-- **Dotfiles & automation** — treating your environment as code
-- **CLI tools** — the ones worth knowing, and why
-- **Developer experience** — reducing friction, increasing flow
-- **Cross-platform setups** — making things work everywhere
-
-### My stack (the short version)
-
-| Category | Tools |
-|----------|-------|
-| Shell | Zsh + Oh-My-Zsh, Nushell |
-| Editor | Neovim |
-| Terminal | Kitty, WezTerm |
-| Dotfiles | chezmoi |
-| Package mgr | Homebrew, DNF, APT |
-| OS | macOS, Fedora, Fedora Atomic, Raspberry Pi OS |
-
-### Find me elsewhere
-
-- **GitHub**: [github.com/jsoyer](https://github.com/jsoyer)
+By night (and weekends, and lunch breaks), I automate everything that stands still long enough.
 
 ---
 
-*All opinions are my own. I write about what I actually use.*
+### What I Actually Do
 
+I build things that scratch my own itches:
+
+- **[raycast-kitty](https://github.com/jsoyer/raycast-kitty)** — A Raycast extension to control your Kitty terminal like a civilized human being. Launch configs, search tabs, manage windows — all without touching the mouse. Currently under review on the official Raycast store.
+
+- **[RTK](https://github.com/jsoyer/rtk)** — A CLI proxy written in Rust that cuts LLM token consumption by 60-90% on dev operations. Because burning tokens on `git status` output is a crime.
+
+- **[cv-pipeline](https://github.com/jsoyer/cv-pipeline)** — An AI-powered job application engine. YAML input → AI tailoring across 5 providers → LaTeX → PDF. 67 scripts, 14 CI/CD workflows, ATS scoring, interview prep. I used it to apply to Anthropic. Didn't get the job. The pipeline is still great.
+
+- **[HivePilot](https://github.com/jsoyer/HivePilot)** — An AI swarm command center for dev workflows. Think multi-agent orchestration before it was trendy.
+
+- **[Wipey](https://github.com/jsoyer/Wipey)** — A tiny macOS Swift app that locks your keyboard, trackpad, and screen so you can clean them. Yes, this is a real problem. Yes, it needed a real solution.
+
+- **[permset](https://github.com/jsoyer/permset)** — A Go-based permission setter for containers running as non-root. Because least privilege applies to containers too.
+
+And a homelab that includes a Raspberry Pi cluster, Paperless-ngx, Grafana dashboards for my Philips Somneo sleep data, a self-hosted Minecraft server that supports both Java and Bedrock players, and a UniFi network setup that is definitely overkill for a home.
+
+---
+
+### The Stack (Honest Version)
+
+I've been on GitHub since **2011**. In that time I've used more tools than I can remember, and I've developed strong opinions about most of them.
+
+Current setup in brief:
+
+| What | Tools |
+|------|-------|
+| **OS** | macOS (daily), Fedora Atomic (Framework), Raspberry Pi OS |
+| **Shell** | Nushell (primary), Zsh (fallback) |
+| **Editor** | Neovim — full Lua config, LSP, the works |
+| **Terminal** | Kitty (primary), WezTerm (backup) |
+| **WM / Bar** | Aerospace + Sketchybar |
+| **Launcher** | Raycast |
+| **Dotfiles** | chezmoi — one bootstrap, works everywhere |
+| **Languages** | TypeScript, Python, Rust, Go, Shell, Lua, Swift |
+
+Full details on the [/uses](/uses/) page.
+
+---
+
+### Why This Blog?
+
+Because I kept writing the same setups from scratch, explaining the same tools to the same people, and losing the same muscle memory every time I got a new machine.
+
+Now I write it down. Future-me is very grateful.
+
+---
+
+### Find Me
+
+- **GitHub**: [github.com/jsoyer](https://github.com/jsoyer)
+- **Twitter / X**: [@JeromeSoyer](https://twitter.com/JeromeSoyer)
+- **LinkedIn**: [Jerome Soyer](https://www.linkedin.com/in/jeromesoyer/)
+
+---
+
+*The opinions here are mine. Not Varonis's. Not my team's. Mine.*
+*Also, yes, the blog runs on a Raspberry Pi CI pipeline. Of course it does.*

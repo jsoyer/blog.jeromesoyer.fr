@@ -23,7 +23,7 @@ I build things that scratch my own itches:
 
 - **[RTK](https://github.com/jsoyer/rtk)** — A CLI proxy written in Rust that cuts LLM token consumption by 60-90% on dev operations. Because burning tokens on `git status` output is a crime.
 
-- **[cv-pipeline](https://github.com/jsoyer/cv-pipeline)** — An AI-powered job application engine. YAML input → AI tailoring across 5 providers → LaTeX → PDF. 67 scripts, 14 CI/CD workflows, ATS scoring, interview prep. I used it to apply to Anthropic. Didn't get the job. The pipeline is still great.
+- **[cv-pipeline](https://github.com/jsoyer/cv-pipeline)** — An AI-powered job application engine. YAML input → AI tailoring across 5 providers → LaTeX → PDF. 67 scripts, 14 CI/CD workflows, ATS scoring, interview prep. Over-engineered? Absolutely. Worth it? Yes.
 
 - **[HivePilot](https://github.com/jsoyer/HivePilot)** — An AI swarm command center for dev workflows. Think multi-agent orchestration before it was trendy.
 

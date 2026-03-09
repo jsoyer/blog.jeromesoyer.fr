@@ -1,5 +1,5 @@
 ---
-title: "I Built an AI-Powered Job Application Pipeline and Applied to Anthropic With It"
+title: "I Built an AI-Powered Job Application Pipeline"
 date: 2026-02-19T11:00:00+01:00
 draft: false
 author: "Jerome Soyer"
@@ -11,7 +11,7 @@ cover:
   alt: "AI Job Application Pipeline"
 ---
 
-I have a confession: I built an entire infrastructure to automate job applications, then applied to Anthropic with it. They didn't hire me. But the system still works flawlessly, and honestly, the technical achievement is worth more than the outcome.
+I have a confession: I built an entire infrastructure to automate job applications. The technical achievement is worth more than any single outcome it produced.
 
 Here's why I built it, how it works, and what it taught me about recruitment that you probably don't want to know.
 
@@ -34,7 +34,7 @@ YAML Input → LLM Personalization → Scoring → LaTeX Compilation → PDF Out
 You start with a YAML spec:
 
 ```yaml
-target_position: "Senior Software Engineer at Anthropic"
+target_position: "Senior Software Engineer"
 job_description_url: "https://..."
 company_culture: "research-driven, AI-focused"
 emphasize_skills:
@@ -56,7 +56,7 @@ The pipeline then sends this to 5 LLM providers in parallel:
 
 ./cv-pipeline/bin/personalize \
   --input base-cv.yaml \
-  --spec anthropic-senior-swe.yaml \
+  --spec target-role.yaml \
   --providers claude,gpt4,llama,mistral,cohere \
   --output personalized-variants/
 ```
@@ -70,7 +70,7 @@ This is where it gets interesting. The pipeline includes an ATS simulator. It sc
 ```bash
 ./cv-pipeline/bin/score-ats \
   --cv personalized-variants/*.tex \
-  --job-description anthropic-senior-swe.txt \
+  --job-description target-role.txt \
   --output scores.json
 ```
 
@@ -102,7 +102,7 @@ Each variant gets a score. The highest-scoring one gets compiled to PDF. You're 
 
 # Generate a markdown cover letter tailored to the role
 ./bin/gen-cover-letter.py \
-  --target anthropic-senior-swe.yaml \
+  --target target-role.yaml \
   --tone technical,direct \
   --output cover-letter.md
 ```
@@ -145,23 +145,13 @@ The pipeline didn't stop at applications. It generates a prep briefing for each 
 
 ```bash
 ./bin/gen-interview-prep \
-  --company anthropic \
+  --company target-company \
   --role "senior-swe" \
   --focus-areas llms,systems,rust \
   --output interview-brief.md
 ```
 
 This pulls from public sources — company blog posts, engineering talks, GitHub repos, technical papers — and creates a briefing that's actually useful. Not a generic "10 things to know about the company" list. Real technical context.
-
-### The Anthropic Irony
-
-I applied to Anthropic using a system that automates the exact problem that Anthropic's products solve. A system that uses Claude to personalize CVs, that uses AI orchestration to pick the best variant, that generates interview prep from LLM analysis.
-
-The response was a polite rejection.
-
-But here's what's funny: the system is fundamentally proving a point about AI in the real world. It's not magic. It's automation that works at the margins — it optimizes something inherently flawed (the job application process) but doesn't fix the fundamental issue (whether you're a fit for the role).
-
-The best personalization can't overcome a skills mismatch. The best ATS scoring can't predict what a hiring committee will think. The pipeline is like performance-tuning code that doesn't solve the algorithm — you're moving faster in the wrong direction.
 
 ### What This Taught Me
 
@@ -181,7 +171,7 @@ The whole thing is on GitHub: **[github.com/jsoyer/cv-pipeline](https://github.c
 
 It's not production-ready for other people — the structure is too personal, the specs too idiosyncratic. But the patterns are there: YAML-driven configuration, LLM provider abstraction, scoring systems, LaTeX compilation, CI/CD workflows.
 
-Fork it, build your own. I regret nothing about the time spent. Even though Anthropic passed, I understand my job search better, I built something that works, and I learned exactly where job applications break down.
+Fork it, build your own. I regret nothing about the time spent. I understand the job search process better, I built something that works, and I learned exactly where applications break down.
 
 Sometimes over-engineering is its own reward.
 

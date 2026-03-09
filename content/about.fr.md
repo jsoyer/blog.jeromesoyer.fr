@@ -23,7 +23,7 @@ Des trucs qui grattent mes propres démangeaisons :
 
 - **[RTK](https://github.com/jsoyer/rtk)** — Un proxy CLI en Rust qui réduit la consommation de tokens LLM de 60-90% sur les opérations dev courantes. Parce que brûler des tokens sur du `git status` est un crime.
 
-- **[cv-pipeline](https://github.com/jsoyer/cv-pipeline)** — Un moteur de candidature alimenté par l'IA. YAML en entrée → personnalisation par 5 providers IA → LaTeX → PDF. 67 scripts, 14 workflows CI/CD, scoring ATS, préparation aux entretiens. Je l'ai utilisé pour postuler chez Anthropic. Je n'ai pas eu le poste. Le pipeline est toujours excellent.
+- **[cv-pipeline](https://github.com/jsoyer/cv-pipeline)** — Un moteur de candidature alimenté par l'IA. YAML en entrée → personnalisation par 5 providers IA → LaTeX → PDF. 67 scripts, 14 workflows CI/CD, scoring ATS, préparation aux entretiens. Sur-ingéniérisé ? Absolument. Utile ? Oui.
 
 - **[HivePilot](https://github.com/jsoyer/HivePilot)** — Un centre de commande multi-agents IA pour les workflows de dev. De l'orchestration multi-agents avant que ce soit à la mode.
 

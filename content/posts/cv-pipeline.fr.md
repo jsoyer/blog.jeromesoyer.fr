@@ -1,5 +1,5 @@
 ---
-title: "J'ai construit un pipeline de candidature IA et j'ai postulé chez Anthropic avec"
+title: "J'ai construit un pipeline de candidature alimenté par l'IA"
 date: 2026-02-19T11:00:00+01:00
 draft: false
 author: "Jerome Soyer"
@@ -11,7 +11,7 @@ cover:
   alt: "AI Job Application Pipeline"
 ---
 
-Je dois avouer quelque chose : j'ai construit une infrastructure entière pour automatiser les candidatures d'emploi, puis j'ai postulé chez Anthropic avec. Ils ne m'ont pas embauché. Mais le système fonctionne encore impeccablement, et honnêtement, l'achievement technique vaut plus que le résultat.
+J'ai une confession : j'ai construit une infrastructure entière pour automatiser les candidatures d'emploi. L'achievement technique vaut plus que n'importe quel résultat individuel qu'il a produit.
 
 Voici pourquoi je l'ai construit, comment ça marche, et ce que ça m'a appris sur le recrutement que tu ne veux probablement pas savoir.
 
@@ -34,7 +34,7 @@ YAML Input → LLM Personalization → Scoring → LaTeX Compilation → PDF Out
 Tu commences avec une spec YAML :
 
 ```yaml
-target_position: "Senior Software Engineer at Anthropic"
+target_position: "Senior Software Engineer"
 job_description_url: "https://..."
 company_culture: "research-driven, AI-focused"
 emphasize_skills:
@@ -56,7 +56,7 @@ Le pipeline envoie ensuite ça à 5 providers LLM en parallèle :
 
 ./cv-pipeline/bin/personalize \
   --input base-cv.yaml \
-  --spec anthropic-senior-swe.yaml \
+  --spec target-role.yaml \
   --providers claude,gpt4,llama,mistral,cohere \
   --output personalized-variants/
 ```
@@ -70,14 +70,14 @@ C'est là que ça devient intéressant. Le pipeline inclut un simulateur ATS. Il
 ```bash
 ./cv-pipeline/bin/score-ats \
   --cv personalized-variants/*.tex \
-  --job-description anthropic-senior-swe.txt \
+  --job-description target-role.txt \
   --output scores.json
 ```
 
 Le système de scoring check :
 
 - **Matching des keywords** : Le CV inclut-il les keywords exacts du job posting?
-- **Résilience de mise en forme** : L'ATS va-t-il parser ça correctement? (Certaines mises en forme tuent tes chances)
+- **Résilience de mise en forme** : L'ATS va-t-il parser ça correctement?
 - **Alignement des sections** : Tes achievements les plus pertinents sont-ils dans la première moitié de la page?
 - **Lisibilité** : Assez de whitespace pour que l'OCR ne choke pas?
 
@@ -102,7 +102,7 @@ Chaque variante reçoit un score. La meilleure variante est compilée en PDF. Tu
 
 # Generate a markdown cover letter tailored to the role
 ./bin/gen-cover-letter.py \
-  --target anthropic-senior-swe.yaml \
+  --target target-role.yaml \
   --tone technical,direct \
   --output cover-letter.md
 ```
@@ -145,23 +145,13 @@ Le pipeline ne s'arrêtait pas aux candidatures. Il génère un briefing de pré
 
 ```bash
 ./bin/gen-interview-prep \
-  --company anthropic \
+  --company target-company \
   --role "senior-swe" \
   --focus-areas llms,systems,rust \
   --output interview-brief.md
 ```
 
 Ça pulle des sources publiques — blog de l'entreprise, talks techniques, GitHub repos, papers académiques — et crée un briefing qui est réellement utile. Pas une liste générique "10 choses à savoir sur l'entreprise". Du contexte technique réel.
-
-### L'Ironie Anthropic
-
-J'ai postulé chez Anthropic avec un système qui automatise exactement le problème que les produits d'Anthropic résolvent. Un système qui utilise Claude pour personnaliser les CVs, qui utilise l'orchestration IA pour choisir la meilleure variante, qui génère des preps d'entretien à partir d'analyses LLM.
-
-La réponse a été un rejet poli.
-
-Mais voici ce qui est drôle : le système prouve fondamentalement un point sur l'IA dans le monde réel. Ce n'est pas de la magie. C'est de l'automation qui fonctionne sur les marges — elle optimise quelque chose d'intrinsèquement cassé (le processus de candidature) mais ne résout pas le problème fondamental (si tu es un fit pour le rôle).
-
-La meilleure personnalisation ne peut pas compenser un mismatch de compétences. Le meilleur ATS scoring ne peut pas prédire ce qu'un hiring committee va penser. Le pipeline est comme de la performance-tuning sur du code qui ne résout pas l'algorithme — tu te déplaces plus vite dans la mauvaise direction.
 
 ### Ce Que Ça M'a Appris
 
@@ -179,9 +169,9 @@ La meilleure personnalisation ne peut pas compenser un mismatch de compétences.
 
 Le tout est sur GitHub : **[github.com/jsoyer/cv-pipeline](https://github.com/jsoyer/cv-pipeline)**
 
-C'est pas production-ready pour d'autres — la structure est trop personnelle, les specs trop idiosyncrasiques. Mais les patterns sont là : configuration piloté par YAML, abstraction de provider LLM, systèmes de scoring, compilation LaTeX, workflows CI/CD.
+C'est pas production-ready pour d'autres — la structure est trop personnelle, les specs trop idiosyncrasiques. Mais les patterns sont là : configuration pilotée par YAML, abstraction de provider LLM, systèmes de scoring, compilation LaTeX, workflows CI/CD.
 
-Fork ça, construis le tien. Je regrette rien du temps dépensé. Même si Anthropic a passé, je comprends mieux ma recherche d'emploi, j'ai construit quelque chose qui marche, et j'ai appris exactement où les candidatures se cassent.
+Fork ça, construis le tien. Je regrette rien du temps dépensé. Je comprends mieux le processus de recherche d'emploi, j'ai construit quelque chose qui marche, et j'ai appris exactement où les candidatures se cassent.
 
 Parfois, la sur-ingéniérie est sa propre récompense.
 

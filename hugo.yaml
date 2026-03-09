@@ -39,10 +39,15 @@ params:
 
   assets:
     disableHLJS: true
+    favicon: /favicon.svg
+    favicon16x16: /favicon.svg
+    favicon32x32: /favicon.svg
+    apple_touch_icon: /favicon.svg
+    safari_pinned_tab: /favicon.svg
 
   label:
     text: "The Least Privilege Life"
-    icon: /favicon.ico
+    icon: /favicon.svg
     iconHeight: 35
 
   profileMode:
@@ -93,10 +98,14 @@ menu:
       name: About
       url: /about/
       weight: 30
+    - identifier: uses
+      name: Uses
+      url: /uses/
+      weight: 40
     - identifier: search
       name: Search
       url: /search/
-      weight: 40
+      weight: 50
 
 outputs:
   home:

@@ -15,6 +15,8 @@ Unix tools are old. `ls` was written in 1971. `grep` in 1973. `find` in 1974. Th
 
 The Rust ecosystem changed this. Over the last decade, a wave of modern CLI tools rewrote the classics — faster, with sensible defaults, human-readable output, and better UX out of the box. Here's the ones I actually use every day.
 
+> **Shell upgrade:** If you want to go further, [Nushell](/posts/nushell/) replaces the entire shell with structured data pipelines — no more `awk` or `grep` at all.
+
 ---
 
 ### `eza` — Better `ls`

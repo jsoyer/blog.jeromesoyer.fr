@@ -131,6 +131,10 @@ Token costs seem abstract until you run `rtk gain` after a week of heavy Claude 
 
 The best tools are the ones that disappear. RTK runs silently in the background, and the only time you notice it is when you check the savings report and wonder how you tolerated the noise before.
 
+### Related
+
+If you haven't already replaced your default CLI tools, RTK's filters are designed around the output of modern tools. See [Modern CLI Tools to Replace Your Defaults](/posts/modern-cli-tools/).
+
 ---
 
 **Source code**: [github.com/jsoyer/rtk](https://github.com/jsoyer/rtk) — PRs and issues welcome.

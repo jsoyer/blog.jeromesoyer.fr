@@ -169,6 +169,8 @@ Want zero new mental models? → yadm
 Want maximum power? → chezmoi
 ```
 
+> **Deep dive:** [Dotfiles Revolution: My Complete chezmoi Setup](/posts/dotfiles/) covers the full implementation — templates, scripts, 1Password integration, and cross-platform setup.
+
 ---
 
 *See [my full chezmoi setup](/posts/dotfiles/) for the detailed implementation*

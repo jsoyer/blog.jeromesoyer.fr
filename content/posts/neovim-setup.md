@@ -241,6 +241,12 @@ chezmoi re-add ~/.config/nvim/lua/plugins/telescope.lua
 
 Every machine gets the same config via `chezmoi update`.
 
+### Terminal & Environment
+
+Running Neovim inside a great terminal makes a real difference. See:
+- [Kitty Terminal: A Deep Dive](/posts/kitty-deep-dive/) — GPU-accelerated, scriptable, the best terminal for a Neovim workflow.
+- [My Dotfiles with chezmoi](/posts/dotfiles/) — how the entire Neovim config is managed and synced across machines.
+
 ---
 
 *Full config available in my [dotfiles](https://github.com/jsoyer)*

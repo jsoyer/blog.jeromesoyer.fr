@@ -168,6 +168,8 @@ Zéro nouveau modèle mental ? → yadm
 Puissance maximale ? → chezmoi
 ```
 
+> **Plongée complète :** [Dotfiles Revolution : Mon setup chezmoi complet](/fr/posts/dotfiles/) couvre l'implémentation totale — templates, scripts, intégration 1Password, et configuration multi-plateforme.
+
 ---
 
 *Voir [mon setup chezmoi complet](/posts/dotfiles/) pour l'implémentation détaillée*

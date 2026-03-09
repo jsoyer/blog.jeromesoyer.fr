@@ -15,6 +15,8 @@ Les outils Unix sont vieux. `ls` date de 1971. `grep` de 1973. `find` de 1974. I
 
 L'écosystème Rust a changé la donne. Voici ceux que j'utilise vraiment tous les jours.
 
+> **Aller plus loin :** [Nushell](/fr/posts/nushell/) remplace le shell entier par des pipelines de données structurées — adieu `awk` et `grep`.
+
 ---
 
 ### `eza` — Mieux que `ls`

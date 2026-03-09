@@ -68,6 +68,10 @@ Les coûts en tokens semblent abstraits jusqu'à ce que vous lanciez `rtk gain` 
 
 Les meilleurs outils sont ceux qui disparaissent. RTK tourne silencieusement en arrière-plan, et la seule fois où vous le remarquez, c'est quand vous consultez le rapport d'économies.
 
+### Pour aller plus loin
+
+Les filtres RTK sont conçus autour des sorties des outils modernes. Si vous ne les avez pas encore, voir [Les outils CLI modernes en 2026](/fr/posts/modern-cli-tools/).
+
 ---
 
 **Code source** : [github.com/jsoyer/rtk](https://github.com/jsoyer/rtk)

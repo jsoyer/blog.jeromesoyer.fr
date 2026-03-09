@@ -55,6 +55,11 @@ Définissez des layouts complets en YAML, lancez en une commande. Mon environnem
 
 Si vous passez votre vie dans le terminal, Kitty vaut le passage. La courbe d'apprentissage est courte, le gain en vitesse et en scriptabilité est réel.
 
+### Prochaines étapes
+
+- **Configurer l'éditeur :** [Mon setup Neovim en 2026](/fr/posts/neovim-setup/) — configurer Neovim pour fonctionner dans Kitty.
+- **Automatiser avec Raycast :** [Extension Raycast Kitty](/fr/posts/raycast-kitty/) — recherche d'onglets, lancement de configs, tout depuis Raycast.
+
 ---
 
 *Config complète disponible dans mes [dotfiles](https://github.com/jsoyer)*

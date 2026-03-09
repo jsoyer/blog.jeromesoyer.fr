@@ -148,6 +148,11 @@ map ctrl+j neighboring_window down
 
 I built a Raycast extension specifically to drive Kitty: search tabs, create windows, launch YAML configs, all without touching the keyboard. It's [available on the Raycast store](https://www.raycast.com/jsoyer/kitty-window-manager). More on that in [its own post](/posts/raycast-kitty/).
 
+### Next Steps
+
+- **Set up your editor:** [My Neovim Setup in 2026](/posts/neovim-setup/) — configure Neovim to work seamlessly inside Kitty.
+- **Automate with Raycast:** [Raycast Kitty Extension](/posts/raycast-kitty/) — search tabs, launch workspace configs, all from Raycast.
+
 ---
 
 *Full config available in my [dotfiles](https://github.com/jsoyer)*

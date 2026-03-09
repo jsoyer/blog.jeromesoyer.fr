@@ -35,24 +35,33 @@
 
 ---
 
-## PHASE 2 — SEO & Discoverabilité 🎯 NEXT
+## PHASE 2 — SEO & Discoverabilité ✅ IN PROGRESS
 
 **Objectif : être trouvé sur Google. Zero coût, impact maximal.**
-**Agents à utiliser : `seo-specialist`, `content-marketer`**
+**Agents utilisés : `seo-specialist`** — audit complet réalisé le 2026-03-09
 
 | Tâche | Priorité | Status |
 |-------|----------|--------|
-| Soumettre sitemap Google Search Console | HIGH | ⬜ |
-| Vérifier domaine (DNS TXT Cloudflare) | HIGH | ⬜ |
-| Audit meta descriptions tous les articles | HIGH | ⬜ |
-| Open Graph audit (og:title, og:image, og:type par page) | HIGH | ⬜ |
-| Schema.org Article structured data | MEDIUM | ⬜ |
-| Canonical URLs vérification (EN/FR) | MEDIUM | ⬜ |
-| Stratégie de linking interne (articles qui se référencent) | MEDIUM | ⬜ |
+| Soumettre sitemap Google Search Console | HIGH | ⬜ action manuelle requise |
+| Vérifier domaine (DNS TXT Cloudflare) | HIGH | ⬜ action manuelle requise |
+| Schema.org Article structured data (était vide !) | CRITICAL | ✅ Fix implémenté |
+| Cover images dotfiles + raycast-kitty | HIGH | ✅ |
+| Open Graph og:locale (en_US / fr_FR) | MEDIUM | ✅ Fix implémenté |
+| Meta descriptions toutes les pages | HIGH | ✅ (about.md manquait) |
+| hreflang x-default | MEDIUM | ✅ Ajouté |
+| Title tags keyword-first (nushell, rtk) | MEDIUM | ✅ |
+| Linking interne (clusters thématiques) | HIGH | ✅ 12 articles mis à jour |
+| Fix stale refs (raycast "in review") | HIGH | ✅ about.md + about.fr.md |
+| Canonical URLs vérification (EN/FR) | MEDIUM | ✅ OK natif PaperMod |
+| robots.txt audit | LOW | ✅ OK natif |
 | Pages tags avec descriptions | MEDIUM | ⬜ |
-| robots.txt audit | LOW | ⬜ |
 | Soumission Bing Webmaster Tools | LOW | ⬜ |
-| Keywords research par article | LOW | ⬜ |
+| Keyword cannibalization chezmoi/dotfiles | MEDIUM | ⬜ À surveiller |
+
+### Actions manuelles restantes (Phase 2)
+1. **Google Search Console** : ajouter propriété → vérifier via DNS TXT Cloudflare → soumettre `https://blog.jeromesoyer.fr/sitemap.xml`
+2. **Rich Results Test** : valider Schema.org sur `https://search.google.com/test/rich-results`
+3. **Bing Webmaster Tools** : soumettre sitemap (import automatique depuis GSC possible)
 
 ---
 

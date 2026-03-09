@@ -21,6 +21,8 @@ ps aux | grep "[n]ode" | awk '{print $2}' | xargs kill
 
 Il y a. Ça s'appelle **[Nushell](https://www.nushell.sh/)**, et ça traite votre shell comme l'outil de traitement de données qu'il est vraiment.
 
+> **Pour aller plus loin :** Découvrez [Les outils CLI modernes pour 2026](/fr/posts/modern-cli-tools/) — des remplaçants Rust qui se marient parfaitement avec Nushell.
+
 ### Le problème avec Bash/Zsh ?
 
 Rien, techniquement. Ça marche. Mais ils ont été conçus à une époque où tout était du texte. Chaque commande sort une chaîne de caractères, et toute votre pipeline est de la manipulation de texte — `awk`, `sed`, `grep`, `cut`. Vous passez la moitié du temps à parser du texte qu'une machine vient de sérialiser pour vous.

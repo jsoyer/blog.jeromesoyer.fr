@@ -6,6 +6,9 @@ tags: ["Raycast", "Kitty", "Terminal", "Productivity", "Automation", "Nushell", 
 categories: ["Tooling"]
 author: "Jerome Soyer"
 description: "How I turned my terminal management from a chaotic mess into a purring productivity machine using Raycast and Kitty."
+cover:
+  image: /images/covers/raycast-kitty.png
+  alt: "Raycast Kitty Extension"
 ---
 
 Let’s be honest: we all spend 90% of our lives in the terminal, and the other 10% wondering which of the 57 open tabs contains that one `tail -f` we started three hours ago. 

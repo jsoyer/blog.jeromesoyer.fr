@@ -4,6 +4,7 @@ date: 2026-01-01
 draft: false
 hidemeta: true
 showtoc: false
+description: "VP Sales Engineering at Varonis, compulsive automator, dotfiles nerd, and builder of tools nobody asked for. Welcome to The Least Privilege Life."
 ---
 
 ## Hey, I'm Jerome.
@@ -18,7 +19,7 @@ By night (and weekends, and lunch breaks), I automate everything that stands sti
 
 I build things that scratch my own itches:
 
-- **[raycast-kitty](https://github.com/jsoyer/raycast-kitty)** — A Raycast extension to control your Kitty terminal like a civilized human being. Launch configs, search tabs, manage windows — all without touching the mouse. Currently under review on the official Raycast store.
+- **[raycast-kitty](https://github.com/jsoyer/raycast-kitty)** — A Raycast extension to control your Kitty terminal like a civilized human being. Launch configs, search tabs, manage windows — all without touching the mouse. Available on the [official Raycast store](https://www.raycast.com/jsoyer/kitty-window-manager).
 
 - **[RTK](https://github.com/jsoyer/rtk)** — A CLI proxy written in Rust that cuts LLM token consumption by 60-90% on dev operations. Because burning tokens on `git status` output is a crime.
 

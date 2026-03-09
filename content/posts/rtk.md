@@ -1,5 +1,5 @@
 ---
-title: "RTK: I Built a Rust Proxy to Stop Burning Tokens on Git Status"
+title: "RTK: A Rust CLI Proxy That Cuts LLM Token Usage by 60-90%"
 date: 2026-03-09T15:00:00+01:00
 draft: false
 author: "Jerome Soyer"

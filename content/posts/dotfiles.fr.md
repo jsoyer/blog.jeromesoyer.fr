@@ -6,6 +6,9 @@ author: "Jerome Soyer"
 description: "Un guide complet pour gérer ses dotfiles de manière cross-platform"
 categories: ["DevOps", "Linux", "macOS"]
 tags: ["chezmoi", "dotfiles", "automation", "fedora", "macos", "linux"]
+cover:
+  image: /images/covers/dotfiles.png
+  alt: "Dotfiles Revolution avec chezmoi"
 ---
 
 ### Le Problème : Chaque Machine est Unique

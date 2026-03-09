@@ -6,6 +6,9 @@ author: "Jerome Soyer"
 description: "A comprehensive guide to cross-platform dotfiles management"
 categories: ["DevOps", "Linux", "macOS"]
 tags: ["chezmoi", "dotfiles", "automation", "fedora", "macos", "linux"]
+cover:
+  image: /images/covers/dotfiles.png
+  alt: "Dotfiles Revolution with chezmoi"
 ---
 
 If you're a developer, you've probably experienced it: setting up a new machine is painful. Your aliases, configurations, keybindings, favorite tools — everything you spent years perfecting lives scattered across `.bashrc`, `.zshrc`, `.vimrc`, and dozens of other config files. And when you get a new work laptop or reinstall your OS? Start from scratch.

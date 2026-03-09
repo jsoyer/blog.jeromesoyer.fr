@@ -1,5 +1,5 @@
 ---
-title: "Why I Switched to Nushell (And Why You Might Too)"
+title: "Nushell: Why I Switched from Zsh (And Why You Might Too)"
 date: 2026-03-09T10:00:00+01:00
 draft: false
 author: "Jerome Soyer"
@@ -20,6 +20,8 @@ ps aux | grep "[n]ode" | awk '{print $2}' | xargs kill
 ...and think: *there has to be a better way.*
 
 There is. It's called **[Nushell](https://www.nushell.sh/)**, and it treats your shell like the data processing tool it actually is.
+
+> **Going further:** Check out [Modern CLI Tools to Replace Your Defaults in 2026](/posts/modern-cli-tools/) for more Rust-powered replacements that pair perfectly with Nushell.
 
 ### What's Wrong With Zsh/Bash?
 

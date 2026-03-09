@@ -1,11 +1,14 @@
 ---
 title: "Modern CLI Tools to Replace Your Defaults in 2026"
 date: 2026-03-09T12:00:00+01:00
-draft: true
+draft: false
 author: "Jerome Soyer"
 description: "The definitive list of modern CLI replacements that are faster, friendlier, and smarter than the tools you grew up with."
 categories: ["Tooling", "CLI"]
 tags: ["cli", "terminal", "productivity", "linux", "macos", "tools", "automation"]
+cover:
+  image: /images/covers/modern-cli-tools.png
+  alt: "Modern CLI Tools 2026"
 ---
 
 Unix tools are old. `ls` was written in 1971. `grep` in 1973. `find` in 1974. They work, but they were designed for a world without colors, without Git, without multi-core processors, and without developers who expect good UX.

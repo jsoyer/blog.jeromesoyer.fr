@@ -1,11 +1,14 @@
 ---
 title: "Les outils CLI modernes pour remplacer vos classiques en 2026"
 date: 2026-03-09T12:00:00+01:00
-draft: true
+draft: false
 author: "Jerome Soyer"
 description: "La liste définitive des remplaçants CLI modernes — plus rapides, plus ergonomiques, et plus intelligents que les outils avec lesquels vous avez grandi."
 categories: ["Tooling", "CLI"]
 tags: ["cli", "terminal", "productivity", "linux", "macos", "tools", "automation"]
+cover:
+  image: /images/covers/modern-cli-tools.png
+  alt: "Modern CLI Tools 2026"
 ---
 
 Les outils Unix sont vieux. `ls` date de 1971. `grep` de 1973. `find` de 1974. Ils fonctionnent, mais ils ont été conçus pour un monde sans couleurs, sans Git, sans processeurs multi-cœurs, et sans développeurs qui attendent une bonne UX.

@@ -1,11 +1,14 @@
 ---
 title: "Kitty Terminal : Plongée dans la bête GPU-accélérée"
 date: 2026-03-09T11:00:00+01:00
-draft: true
+draft: false
 author: "Jerome Soyer"
 description: "Au-delà des onglets — les kittens, les layouts, le scripting, et pourquoi c'est mon terminal principal depuis des années."
 categories: ["Tooling", "Terminal"]
 tags: ["kitty", "terminal", "productivity", "gpu", "cli", "automation"]
+cover:
+  image: /images/covers/kitty-deep-dive.png
+  alt: "Kitty Terminal Deep Dive"
 ---
 
 La plupart des développeurs choisissent leur terminal comme ils choisissent une police : une fois, un peu au hasard, et ils ne changent plus jamais. J'étais pareil — jusqu'à ce que j'essaie **[Kitty](https://sw.kovidgoyal.net/kitty/)** et réalise que je laissais des performances et des fonctionnalités sur la table depuis des années.

@@ -1,11 +1,14 @@
 ---
 title: "chezmoi vs yadm vs stow: Which Dotfiles Manager Should You Use in 2026?"
 date: 2026-03-09T13:00:00+01:00
-draft: true
+draft: false
 author: "Jerome Soyer"
 description: "A practical comparison of the three most popular dotfiles managers — with real tradeoffs, not just feature tables."
 categories: ["DevOps", "Tooling"]
 tags: ["chezmoi", "dotfiles", "yadm", "stow", "automation", "linux", "macos"]
+cover:
+  image: /images/covers/chezmoi-vs-alternatives.png
+  alt: "chezmoi vs yadm vs stow"
 ---
 
 I've used all three. I settled on chezmoi. But the honest answer is: *it depends on what you're trying to do*. Here's the practical breakdown, based on actual usage across macOS, Fedora, Fedora Atomic, and Raspberry Pi.

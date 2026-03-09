@@ -1,11 +1,14 @@
 ---
 title: "Kitty Terminal: A Deep Dive Into the GPU-Accelerated Beast"
 date: 2026-03-09T11:00:00+01:00
-draft: true
+draft: false
 author: "Jerome Soyer"
 description: "Beyond just opening tabs — Kitty's kittens, layouts, scripting, and why it's been my primary terminal for years."
 categories: ["Tooling", "Terminal"]
 tags: ["kitty", "terminal", "productivity", "gpu", "cli", "automation"]
+cover:
+  image: /images/covers/kitty-deep-dive.png
+  alt: "Kitty Terminal Deep Dive"
 ---
 
 Most developers pick a terminal emulator the way they pick a font: once, slightly randomly, and then never change. I was the same — until I tried **[Kitty](https://sw.kovidgoyal.net/kitty/)** and realized I'd been leaving performance and capability on the table for years.
@@ -143,7 +146,7 @@ map ctrl+j neighboring_window down
 
 ### The Raycast Connection
 
-I built a Raycast extension specifically to drive Kitty: search tabs, create windows, launch YAML configs, all without touching the keyboard. It's [currently in review](https://github.com/raycast/extensions) on the official Raycast store. More on that in [its own post](/posts/raycast-kitty/).
+I built a Raycast extension specifically to drive Kitty: search tabs, create windows, launch YAML configs, all without touching the keyboard. It's [available on the Raycast store](https://www.raycast.com/jsoyer/kitty-window-manager). More on that in [its own post](/posts/raycast-kitty/).
 
 ---
 

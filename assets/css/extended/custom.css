@@ -405,3 +405,55 @@ body:not(.dark) .toc details > summary {
   background: #cba6f7;
   color: #1e1e2e;
 }
+
+/* ----------------------------------------------------------
+   Reading progress bar (article pages only)
+---------------------------------------------------------- */
+#reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  pointer-events: none;
+}
+
+#reading-progress::after {
+  content: '';
+  display: block;
+  height: 100%;
+  background: linear-gradient(to right, #a6e3a1, #89b4fa, #cba6f7);
+  transform-origin: left;
+  transform: scaleX(var(--scroll-progress, 0));
+  transition: transform 0.05s linear;
+}
+
+/* ----------------------------------------------------------
+   Article cover images
+---------------------------------------------------------- */
+.post-entry .entry-cover {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.post-entry .entry-cover img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.post-entry:hover .entry-cover img {
+  transform: scale(1.02);
+}
+
+/* Mermaid diagrams */
+.mermaid {
+  margin: 1.75rem auto;
+  text-align: center;
+  overflow-x: auto;
+}

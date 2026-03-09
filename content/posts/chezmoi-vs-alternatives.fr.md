@@ -1,11 +1,14 @@
 ---
 title: "chezmoi vs yadm vs stow : lequel choisir en 2026 ?"
 date: 2026-03-09T13:00:00+01:00
-draft: true
+draft: false
 author: "Jerome Soyer"
 description: "Une comparaison pratique des trois gestionnaires de dotfiles les plus populaires — avec de vrais compromis, pas juste des tableaux de fonctionnalités."
 categories: ["DevOps", "Tooling"]
 tags: ["chezmoi", "dotfiles", "yadm", "stow", "automation", "linux", "macos"]
+cover:
+  image: /images/covers/chezmoi-vs-alternatives.png
+  alt: "chezmoi vs yadm vs stow"
 ---
 
 J'ai utilisé les trois. J'ai choisi chezmoi. Mais la vraie réponse est : *ça dépend de ce que vous voulez faire*. Voici le bilan pratique, basé sur une utilisation réelle sur macOS, Fedora, Fedora Atomic, et Raspberry Pi.

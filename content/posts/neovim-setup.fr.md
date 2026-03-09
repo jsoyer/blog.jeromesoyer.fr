@@ -1,11 +1,14 @@
 ---
 title: "Mon Setup Neovim en 2026 : LSP, Plugins, et un Workflow qui Fonctionne"
 date: 2026-03-09T14:00:00+01:00
-draft: true
+draft: false
 author: "Jerome Soyer"
 description: "Un guide pratique de ma configuration Neovim — lazy.nvim, setup LSP, Telescope, et les plugins que j'utilise vraiment tous les jours."
 categories: ["Tooling", "Editor"]
 tags: ["neovim", "nvim", "lua", "lsp", "productivity", "editor", "cli"]
+cover:
+  image: /images/covers/neovim-setup.png
+  alt: "Neovim Setup 2026"
 ---
 
 Je ne vais pas vous convaincre d'utiliser Neovim. Si vous lisez ça, vous avez déjà décidé. Voici le guide pratique d'un setup qui fonctionne — rapide, maintenable, sans 400 plugins qui se battent.

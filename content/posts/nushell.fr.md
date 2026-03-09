@@ -1,11 +1,14 @@
 ---
 title: "Pourquoi j'ai switché sur Nushell (et pourquoi vous devriez peut-être aussi)"
 date: 2026-03-09T10:00:00+01:00
-draft: true
+draft: false
 author: "Jerome Soyer"
 description: "Après des années de zsh, j'ai changé mon shell principal pour Nushell. Ce qui a changé, ce qui a cassé, et pourquoi je ne reviens pas en arrière."
 categories: ["Tooling", "Terminal"]
 tags: ["nushell", "shell", "terminal", "productivity", "cli", "zsh"]
+cover:
+  image: /images/covers/nushell.png
+  alt: "Why I Switched to Nushell"
 ---
 
 Il y a un moment dans la vie de tout développeur où on regarde une ligne bash comme ça :

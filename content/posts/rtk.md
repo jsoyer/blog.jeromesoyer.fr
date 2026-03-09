@@ -1,11 +1,14 @@
 ---
 title: "RTK: I Built a Rust Proxy to Stop Burning Tokens on Git Status"
 date: 2026-03-09T15:00:00+01:00
-draft: true
+draft: false
 author: "Jerome Soyer"
 description: "How I built a CLI proxy in Rust that cuts LLM token consumption by 60-90% on common dev operations — and why it matters more than you think."
 categories: ["Tooling", "AI"]
 tags: ["rust", "cli", "llm", "claude", "ai", "productivity", "tokens", "automation"]
+cover:
+  image: /images/covers/rtk.png
+  alt: "RTK: Stop Burning Tokens"
 ---
 
 If you use Claude Code, Cursor, or any AI-assisted dev tool daily, here's a number that should bother you: **a single `git status` on a large repo can consume 10,000+ tokens**. Not because the output is useful — but because the raw text gets shoved into context as-is.

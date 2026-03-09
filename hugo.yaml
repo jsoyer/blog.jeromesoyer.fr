@@ -45,7 +45,8 @@ languages:
         Content: >
           VP Sales Engineering @Varonis by day — so yes, I know what bad opsec looks like.
           Compulsive automator, dotfiles nerd, and builder of tools nobody asked for.
-          This blog is where I write down what actually works.
+          Suit during the week, hoodie and sneakers on weekends. Wine, racing, and terminals the rest of the time.
+          This is my nerdy corner of the internet — expect anything.
 
   fr:
     languageName: "FR"
@@ -78,7 +79,8 @@ languages:
         Content: >
           VP Sales Engineering @Varonis le jour — donc oui, je sais à quoi ressemble une mauvaise opsec.
           Automatiseur compulsif, fana des dotfiles, et constructeur d'outils que personne n'a demandés.
-          Ce blog, c'est là où j'écris ce qui marche vraiment.
+          Costume en semaine, hoodie et sneakers le week-end. Vin, racing, et terminaux le reste du temps.
+          C'est mon coin nerd sur internet — attendez-vous à tout.
 
 params:
   env: production

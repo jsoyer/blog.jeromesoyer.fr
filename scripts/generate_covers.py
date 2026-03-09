@@ -281,7 +281,7 @@ def _draw_ghost_glyph(
     glyph:    str,
     accent:   tuple[int, int, int],
     font_size: int = 300,
-    opacity:   int = 24,
+    opacity:   int = 55,
 ) -> Image.Image:
     """
     Render a large monospace glyph as ghosted art in the right half.
@@ -336,9 +336,9 @@ def _draw_geometry(
     layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d     = ImageDraw.Draw(layer)
 
-    hi  = accent + (200,)
-    mid = accent + (70,)
-    lo  = accent + (28,)
+    hi  = accent + (220,)
+    mid = accent + (110,)
+    lo  = accent + (50,)
 
     # Top-left L-bracket
     bx, by, blen, bthick = 56, 52, 44, 3
@@ -419,11 +419,9 @@ def generate_cover(
     out_path:   Path,
 ) -> None:
     """
-    Full pipeline:
-        make_background -> dot_grid -> ghost_glyph -> geometry -> text layers
-    All text is left-aligned to PAD_L=72, within a TEXT_W=740px content zone.
-    The content block (tags + title + bar + subtitle) is vertically centered
-    with a slight upward bias (visual center effect).
+    Full pipeline: make_background -> dot_grid -> ghost_glyph -> geometry
+    No text is embedded — the visual identity comes entirely from accent color
+    + glyph + geometry. Hugo renders title/description separately in the template.
     """
     accent = _hex_to_rgb(accent_hex)
 
@@ -432,82 +430,11 @@ def generate_cover(
     img = _draw_dot_grid(img)
     img = _draw_ghost_glyph(img, glyph, accent)
     img = _draw_geometry(img, accent)
-    draw = ImageDraw.Draw(img)
-
-    # ── Fonts ──────────────────────────────────────────────────────────────────
-    font_tags   = ImageFont.truetype(FONT_BOLD,   17)
-    font_sub    = ImageFont.truetype(FONT_MEDIUM, 24)
-    font_domain = ImageFont.truetype(FONT_REG,    17)
-
-    # ── Layout constants ───────────────────────────────────────────────────────
-    PAD_L   = 72       # left margin (aligns with bracket inner edge)
-    TEXT_W  = 740      # max text width — keeps glyph zone clear
-    VPAD    = 72       # top/bottom padding (clears the bracket corners)
-
-    # Typography rhythm constants
-    TAG_H      = 22    # approximate rendered height of tag line
-    GAP_TT     = 24    # gap: bottom of tags -> top of title
-    BAR_H      = 3     # accent bar thickness
-    BAR_GT     = 18    # gap: bottom of title -> top of bar
-    BAR_GB     = 20    # gap: bottom of bar -> top of subtitle
-    SUB_LINE_H = 36    # subtitle line height
-
-    # ── Fit title ──────────────────────────────────────────────────────────────
-    title_font, title_lines, title_size = _fit_title(title, TEXT_W)
-    title_line_h = int(title_size * 1.15)
-
-    sub_lines = _wrap(subtitle, font_sub, TEXT_W - 20)
-
-    # ── Vertical centering ────────────────────────────────────────────────────
-    block_h = (
-        TAG_H + GAP_TT
-        + len(title_lines) * title_line_h
-        + BAR_GT + BAR_H + BAR_GB
-        + len(sub_lines) * SUB_LINE_H
-    )
-    available  = H - 2 * VPAD
-    block_top  = VPAD + (available - block_h) // 2 - 8  # -8: visual center bias
-
-    # ── Tags ───────────────────────────────────────────────────────────────────
-    tag_str = "  /  ".join(t.upper() for t in tags)
-    draw.text((PAD_L, block_top), tag_str, font=font_tags, fill=accent)
-
-    # ── Title ──────────────────────────────────────────────────────────────────
-    title_y = block_top + TAG_H + GAP_TT
-    for i, line in enumerate(title_lines):
-        draw.text(
-            (PAD_L, title_y + i * title_line_h),
-            line,
-            font=title_font,
-            fill=TEXT,
-        )
-
-    # ── Accent bar ─────────────────────────────────────────────────────────────
-    bar_y = title_y + len(title_lines) * title_line_h + BAR_GT
-    draw.rectangle(
-        [PAD_L, bar_y, PAD_L + 52, bar_y + BAR_H],
-        fill=accent,
-    )
-
-    # ── Subtitle ───────────────────────────────────────────────────────────────
-    sub_y = bar_y + BAR_H + BAR_GB
-    for i, line in enumerate(sub_lines):
-        draw.text(
-            (PAD_L, sub_y + i * SUB_LINE_H),
-            line,
-            font=font_sub,
-            fill=SUB0,
-        )
-
-    # ── Domain (bottom-right, dimmed) ──────────────────────────────────────────
-    domain = "blog.jeromesoyer.fr"
-    dw     = _text_width(domain, font_domain)
-    draw.text((W - dw - 60, H - 42), domain, font=font_domain, fill=SURF1)
 
     # ── Save ───────────────────────────────────────────────────────────────────
     out_path.parent.mkdir(parents=True, exist_ok=True)
     img.save(out_path, format="PNG", optimize=True)
-    print(f"  PNG  {out_path}  [{title_size}px / {len(title_lines)} lines]")
+    print(f"  PNG  {out_path}")
 
 
 def generate_webp(png_path: Path) -> None:

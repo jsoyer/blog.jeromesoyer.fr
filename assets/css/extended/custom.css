@@ -1,0 +1,473 @@
+/* ============================================================
+   Custom theme — Catppuccin Mocha inspired
+   Targeting: blog.jeromesoyer.fr / The Least Privilege Life
+   ============================================================ */
+
+/* --- Fonts ------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* --- Dark mode palette (Catppuccin Mocha) ------------------ */
+:root {
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+.dark {
+  --theme:    #1e1e2e;   /* base */
+  --entry:    #181825;   /* mantle */
+  --primary:  #cdd6f4;   /* text */
+  --secondary:#a6adc8;   /* subtext1 */
+  --tertiary: #313244;   /* surface0 */
+  --content:  #cdd6f4;   /* text */
+  --code-bg:  #181825;   /* mantle */
+  --border:   #45475a;   /* surface1 */
+  --accent:   #a6e3a1;   /* green */
+  --accent2:  #89b4fa;   /* blue */
+  --accent3:  #cba6f7;   /* mauve */
+}
+
+/* Light mode — clean warm white */
+body:not(.dark) {
+  --theme:    #eff1f5;   /* latte base */
+  --entry:    #ffffff;
+  --primary:  #4c4f69;   /* latte text */
+  --secondary:#6c6f85;   /* latte subtext0 */
+  --tertiary: #dce0e8;   /* latte surface0 */
+  --content:  #4c4f69;
+  --code-bg:  #e6e9ef;   /* latte mantle */
+  --border:   #ccd0da;
+  --accent:   #40a02b;   /* latte green */
+  --accent2:  #1e66f5;   /* latte blue */
+  --accent3:  #8839ef;   /* latte mauve */
+}
+
+/* --- Base typography --------------------------------------- */
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Header / Nav ------------------------------------------ */
+.nav {
+  background: var(--theme);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.dark .nav {
+  background: rgba(30, 30, 46, 0.85);
+}
+
+.logo a,
+.logo a:visited {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--accent) !important;
+}
+
+.logo a::before {
+  content: '$ ';
+  opacity: 0.5;
+}
+
+#menu a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 4px 10px;
+  border-radius: 6px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+#menu a:hover {
+  background: var(--tertiary);
+  color: var(--accent);
+}
+
+/* --- Home info banner -------------------------------------- */
+.home-info-content {
+  border-left: 3px solid var(--accent);
+  padding-left: 1.25rem;
+}
+
+.home-info-content h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Post cards -------------------------------------------- */
+.post-entry {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.post-entry::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--accent);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.post-entry:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.post-entry:hover::before {
+  opacity: 1;
+}
+
+.entry-header h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.post-entry:hover .entry-header h2 {
+  color: var(--accent);
+}
+
+.entry-content {
+  font-size: 0.925rem;
+  color: var(--secondary);
+  line-height: 1.6;
+}
+
+.entry-footer {
+  font-family: var(--font-mono);
+  font-size: 0.775rem;
+  color: var(--secondary);
+  margin-top: 0.75rem;
+}
+
+/* --- Tags / Categories ------------------------------------ */
+.post-tags a,
+.terms-tags a {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  background: var(--tertiary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 2px 8px;
+  color: var(--secondary);
+  transition: all 0.2s ease;
+}
+
+.post-tags a:hover,
+.terms-tags a:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #1e1e2e;
+}
+
+/* --- Article content --------------------------------------- */
+.post-content {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  scroll-margin-top: 80px;
+}
+
+.post-content h2 {
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.4rem;
+}
+
+.post-content h3 {
+  font-size: 1.2rem;
+  color: var(--accent2);
+}
+
+.post-content a {
+  color: var(--accent2);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color 0.2s ease;
+}
+
+.post-content a:hover {
+  color: var(--accent);
+}
+
+/* --- Inline code ------------------------------------------ */
+.post-content code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.15em 0.4em;
+  color: var(--accent3);
+}
+
+/* --- Code blocks ------------------------------------------ */
+.post-content pre {
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dark .post-content pre {
+  background: #11111b !important;  /* Catppuccin Crust */
+}
+
+.post-content pre code {
+  font-size: 0.875rem;
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+}
+
+/* Code block copy button */
+.copy-code-button {
+  font-family: var(--font-mono);
+  font-size: 0.7rem !important;
+  border-radius: 6px !important;
+  background: var(--tertiary) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--secondary) !important;
+  transition: all 0.2s ease !important;
+}
+
+.copy-code-button:hover {
+  background: var(--accent) !important;
+  color: #1e1e2e !important;
+  border-color: var(--accent) !important;
+}
+
+/* --- Tables ----------------------------------------------- */
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.post-content th {
+  background: var(--tertiary);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 10px 16px;
+  text-align: left;
+  color: var(--secondary);
+}
+
+.post-content td {
+  padding: 10px 16px;
+  border-top: 1px solid var(--border);
+}
+
+.post-content tr:hover td {
+  background: var(--tertiary);
+}
+
+/* --- Blockquote ------------------------------------------- */
+.post-content blockquote {
+  border-left: 3px solid var(--accent3);
+  background: var(--entry);
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  color: var(--secondary);
+}
+
+/* --- Post header ------------------------------------------ */
+.post-header {
+  margin-bottom: 2rem;
+}
+
+.post-title {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.25;
+}
+
+.post-meta {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--secondary);
+  margin-top: 0.75rem;
+}
+
+.post-meta .post-author::before {
+  content: '> ';
+  color: var(--accent);
+}
+
+/* --- Breadcrumbs ------------------------------------------ */
+.breadcrumbs {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--secondary);
+}
+
+.breadcrumbs a {
+  color: var(--accent2);
+}
+
+.breadcrumbs .separator {
+  margin: 0 0.3rem;
+  opacity: 0.4;
+}
+
+/* --- Table of contents ------------------------------------ */
+.toc {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  font-size: 0.875rem;
+  margin-bottom: 2rem;
+}
+
+.toc details summary {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.toc ul {
+  margin-top: 0.75rem;
+}
+
+.toc a {
+  color: var(--secondary);
+  transition: color 0.2s ease;
+}
+
+.toc a:hover {
+  color: var(--accent);
+}
+
+/* --- Post navigation (prev/next) -------------------------- */
+.paginav {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.paginav a {
+  padding: 1rem 1.25rem;
+  transition: background 0.2s ease;
+}
+
+.paginav a:hover {
+  background: var(--tertiary);
+}
+
+.paginav-prev .paginav-title::before { content: '← '; }
+.paginav-next .paginav-title::after  { content: ' →'; }
+
+.paginav-title {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+/* --- Footer ----------------------------------------------- */
+.footer {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--secondary);
+  border-top: 1px solid var(--border);
+  padding-top: 1.5rem;
+}
+
+/* --- Search ----------------------------------------------- */
+#searchbox input {
+  font-family: var(--font-mono);
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--primary);
+  padding: 0.6rem 1rem;
+  transition: border-color 0.2s ease;
+  width: 100%;
+}
+
+#searchbox input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* --- Scrollbar (webkit) ----------------------------------- */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--theme);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tertiary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
+
+/* --- Selection -------------------------------------------- */
+::selection {
+  background: var(--accent3);
+  color: #1e1e2e;
+}
+
+/* --- Smooth transitions ----------------------------------- */
+body,
+.post-entry,
+#menu a,
+.post-content a,
+.post-content code {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

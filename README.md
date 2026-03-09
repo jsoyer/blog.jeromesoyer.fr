@@ -115,14 +115,30 @@ Prérequis : `pip install Pillow` (les fonts sont dans `scripts/fonts/`).
 
 ---
 
-## Publier un article en draft
+## Publier un article
+
+Le système de publication est **entièrement basé sur `draft`** dans le front matter.
+Hugo n'inclut jamais les articles avec `draft: true` dans le build — c'est le seul interrupteur.
+
+```
+draft: true   → article invisible sur le site (même après push)
+draft: false  → article live au prochain push
+```
+
+**Workflow :**
 
 ```bash
-# Passer draft: true → draft: false dans le front matter, puis :
-git add content/posts/mon-article.md
+# 1. Écrire / relire sans publier — push librement, rien n'apparaît
+git push   # draft: true → Hugo ignore l'article
+
+# 2. Quand l'article est prêt : changer draft: true → draft: false
+# puis commit + push → live en ~1 min
+git add content/posts/mon-article.md content/posts/mon-article.fr.md
 git commit -m "feat: publish mon-article"
 git push
 ```
+
+Pas besoin de branches, de tags git, ni de commandes spéciales. Le CI fait tout.
 
 ---
 

@@ -472,3 +472,17 @@ body:not(.dark) .toc details > summary {
   text-align: center;
   overflow-x: auto;
 }
+
+/* ----------------------------------------------------------
+   TOC — active heading highlight
+---------------------------------------------------------- */
+.toc a {
+  transition: color 0.15s ease, padding-left 0.15s ease;
+}
+
+.toc a.active {
+  color: var(--primary);
+  font-weight: 600;
+  padding-left: 4px;
+  border-left: 2px solid var(--primary);
+}

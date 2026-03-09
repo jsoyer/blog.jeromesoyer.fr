@@ -29,8 +29,6 @@ Des trucs qui grattent mes propres démangeaisons :
 
 - **[Wipey](https://github.com/jsoyer/Wipey)** — Une petite app macOS en Swift qui verrouille clavier, trackpad et écran pour pouvoir les nettoyer. Oui, c'est un vrai problème. Oui, ça méritait une vraie solution.
 
-- **[permset](https://github.com/jsoyer/permset)** — Un setter de permissions en Go pour les containers qui tournent sans root. Parce que le least privilege s'applique aux containers aussi.
-
 Et un homelab qui comprend un cluster Raspberry Pi, Paperless-ngx, des dashboards Grafana pour mes données de sommeil Philips Somneo, un serveur Minecraft auto-hébergé compatible Java et Bedrock, et un réseau UniFi qui est clairement surdimensionné pour une maison.
 
 ---

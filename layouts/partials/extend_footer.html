@@ -1,0 +1,54 @@
+{{- if and .IsPage (.Param "ShowToc") }}
+<script>
+(function () {
+  const tocLinks = document.querySelectorAll('.toc a');
+  if (!tocLinks.length) return;
+
+  const headingIds = Array.from(tocLinks).map(a => {
+    const href = a.getAttribute('href');
+    return href && href.startsWith('#') ? href.slice(1) : null;
+  }).filter(Boolean);
+
+  const headings = headingIds
+    .map(id => document.getElementById(id))
+    .filter(Boolean);
+
+  if (!headings.length) return;
+
+  let activeId = null;
+
+  const setActive = (id) => {
+    if (id === activeId) return;
+    activeId = id;
+    tocLinks.forEach(a => {
+      const matches = a.getAttribute('href') === '#' + id;
+      a.classList.toggle('active', matches);
+    });
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setActive(entry.target.id);
+      }
+    });
+  }, {
+    rootMargin: '0px 0px -70% 0px',
+    threshold: 0,
+  });
+
+  headings.forEach(h => observer.observe(h));
+
+  // Fallback: on scroll, pick the heading closest to top of viewport
+  window.addEventListener('scroll', () => {
+    let current = headings[0];
+    for (const h of headings) {
+      if (h.getBoundingClientRect().top <= 120) {
+        current = h;
+      }
+    }
+    if (current) setActive(current.id);
+  }, { passive: true });
+})();
+</script>
+{{- end }}

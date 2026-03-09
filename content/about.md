@@ -29,8 +29,6 @@ I build things that scratch my own itches:
 
 - **[Wipey](https://github.com/jsoyer/Wipey)** — A tiny macOS Swift app that locks your keyboard, trackpad, and screen so you can clean them. Yes, this is a real problem. Yes, it needed a real solution.
 
-- **[permset](https://github.com/jsoyer/permset)** — A Go-based permission setter for containers running as non-root. Because least privilege applies to containers too.
-
 And a homelab that includes a Raspberry Pi cluster, Paperless-ngx, Grafana dashboards for my Philips Somneo sleep data, a self-hosted Minecraft server that supports both Java and Bedrock players, and a UniFi network setup that is definitely overkill for a home.
 
 ---

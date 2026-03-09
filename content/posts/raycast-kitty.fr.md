@@ -1,6 +1,6 @@
 ---
 title: "Domptez le Félin : Pilotez Kitty Terminal au doigt et à l'œil avec Raycast"
-date: 2025-10-02T10:00:00+02:00
+date: 2026-03-05T10:00:00+01:00
 draft: false
 tags: ["Raycast", "Kitty", "Terminal", "Productivity", "Automation", "Nushell", "AI"]
 categories: ["Tooling"]

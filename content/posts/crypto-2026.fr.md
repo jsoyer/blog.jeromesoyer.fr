@@ -1,6 +1,6 @@
 ---
 title: "Crypto en 2026 : ce qui a changé, ce qui ne changera pas"
-date: 2026-03-04T08:00:00+01:00
+date: 2026-01-07T08:00:00+01:00
 draft: false
 author: "Jerome Soyer"
 description: "Une perspective honnête sur où en est la crypto en 2026 — des ETFs aux L2, du hype à la vraie utilité."

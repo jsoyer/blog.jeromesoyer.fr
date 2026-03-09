@@ -8,8 +8,6 @@ categories: ["DevOps", "Tooling"]
 tags: ["chezmoi", "dotfiles", "yadm", "stow", "automation", "linux", "macos"]
 ---
 
-# chezmoi vs yadm vs stow : lequel choisir en 2026 ?
-
 J'ai utilisé les trois. J'ai choisi chezmoi. Mais la vraie réponse est : *ça dépend de ce que vous voulez faire*. Voici le bilan pratique, basé sur une utilisation réelle sur macOS, Fedora, Fedora Atomic, et Raspberry Pi.
 
 > Vous connaissez déjà chezmoi ? Voir [mon setup complet ici](/posts/dotfiles/).

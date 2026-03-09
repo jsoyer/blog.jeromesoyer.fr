@@ -8,8 +8,6 @@ categories: ["Tooling", "CLI"]
 tags: ["cli", "terminal", "productivity", "linux", "macos", "tools", "automation"]
 ---
 
-# Les outils CLI modernes pour remplacer vos classiques en 2026
-
 Les outils Unix sont vieux. `ls` date de 1971. `grep` de 1973. `find` de 1974. Ils fonctionnent, mais ils ont été conçus pour un monde sans couleurs, sans Git, sans processeurs multi-cœurs, et sans développeurs qui attendent une bonne UX.
 
 L'écosystème Rust a changé la donne. Voici ceux que j'utilise vraiment tous les jours.

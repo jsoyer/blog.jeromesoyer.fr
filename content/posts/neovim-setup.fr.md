@@ -8,8 +8,6 @@ categories: ["Tooling", "Editor"]
 tags: ["neovim", "nvim", "lua", "lsp", "productivity", "editor", "cli"]
 ---
 
-# Mon Setup Neovim en 2026 : LSP, Plugins, et un Workflow qui Fonctionne
-
 Je ne vais pas vous convaincre d'utiliser Neovim. Si vous lisez ça, vous avez déjà décidé. Voici le guide pratique d'un setup qui fonctionne — rapide, maintenable, sans 400 plugins qui se battent.
 
 > Config complète disponible dans mes [dotfiles](https://github.com/jsoyer) gérés via chezmoi.

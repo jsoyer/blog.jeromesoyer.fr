@@ -8,8 +8,6 @@ categories: ["DevOps", "Linux", "macOS"]
 tags: ["chezmoi", "dotfiles", "automation", "fedora", "macos", "linux"]
 ---
 
-# Dotfiles Revolution : Comment je gère tout mon environnement de dev avec Chezmoi
-
 ### Le Problème : Chaque Machine est Unique
 
 Si vous êtes développeur, vous l'avez probablement vécu : configurer une nouvelle machine est douloureux. Vos alias, configurations, raccourcis clavier, outils préférés — tout ce sur quoi vous avez passé des années à peaufiner — est dispersé à travers `.bashrc`, `.zshrc`, `.vimrc`, et des dizaines d'autres fichiers de config. Et quand vous avez un nouvel ordinateur ou réinstallez votre OS ? Tout recommencer à zéro.

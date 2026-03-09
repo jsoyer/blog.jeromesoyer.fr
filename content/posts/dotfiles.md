@@ -8,8 +8,6 @@ categories: ["DevOps", "Linux", "macOS"]
 tags: ["chezmoi", "dotfiles", "automation", "fedora", "macos", "linux"]
 ---
 
-# Dotfiles Revolution: How I Manage My Entire dev Environment with Chezmoi
-
 If you're a developer, you've probably experienced it: setting up a new machine is painful. Your aliases, configurations, keybindings, favorite tools — everything you spent years perfecting lives scattered across `.bashrc`, `.zshrc`, `.vimrc`, and dozens of other config files. And when you get a new work laptop or reinstall your OS? Start from scratch.
 
 I've been there. After years of manually copying configs between machines, I decided to finally solve this properly. This is the story of how I built a **fully automated, cross-platform dotfiles system** using [chezmoi](https://www.chezmoi.io/) that handles everything from my shell aliases to my Neovim config to my terminal emulators — across macOS, Fedora (both regular and Atomic), Raspberry Pi, and Windows.

@@ -8,8 +8,6 @@ categories: ["Tooling", "Terminal"]
 tags: ["nushell", "shell", "terminal", "productivity", "cli", "zsh"]
 ---
 
-# Why I Switched to Nushell (And Why You Might Too)
-
 There's a moment in every developer's life when they look at a bash one-liner like this:
 
 ```bash

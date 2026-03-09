@@ -70,20 +70,6 @@ body {
   letter-spacing: -0.02em;
 }
 
-.logo a::before {
-  content: '$ ';
-  color: #a6e3a1;
-  opacity: 0.8;
-}
-
-.dark .logo a::before {
-  color: #a6e3a1;
-}
-
-body:not(.dark) .logo a::before {
-  color: #40a02b;
-}
-
 /* ----------------------------------------------------------
    Nav links
 ---------------------------------------------------------- */

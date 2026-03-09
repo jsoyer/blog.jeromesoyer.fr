@@ -59,9 +59,24 @@
 | Keyword cannibalization chezmoi/dotfiles | MEDIUM | ⬜ À surveiller |
 
 ### Actions manuelles restantes (Phase 2)
-1. **Google Search Console** : ajouter propriété → vérifier via DNS TXT Cloudflare → soumettre `https://blog.jeromesoyer.fr/sitemap.xml`
-2. **Rich Results Test** : valider Schema.org sur `https://search.google.com/test/rich-results`
-3. **Bing Webmaster Tools** : soumettre sitemap (import automatique depuis GSC possible)
+
+#### A. Google Search Console
+1. Aller sur [search.google.com/search-console](https://search.google.com/search-console)
+2. "Ajouter une propriété" → type **Domaine** → `blog.jeromesoyer.fr`
+3. Copier le code TXT fourni par Google
+4. Dans **Cloudflare DNS** (dash.cloudflare.com) → Zone `blog.jeromesoyer.fr` → DNS → Ajouter un enregistrement `TXT` sur `@` avec la valeur Google
+5. Retourner dans GSC → "Vérifier"
+6. Une fois vérifié → **Sitemaps** → Ajouter : `https://blog.jeromesoyer.fr/sitemap.xml`
+
+#### B. Valider Schema.org (Rich Results)
+1. Aller sur [search.google.com/test/rich-results](https://search.google.com/test/rich-results)
+2. Tester une URL d'article, ex : `https://blog.jeromesoyer.fr/posts/rtk/`
+3. Vérifier que "BlogPosting" et "BreadcrumbList" apparaissent sans erreur
+
+#### C. Bing Webmaster Tools
+1. Aller sur [bing.com/webmasters](https://www.bing.com/webmasters)
+2. "Importer depuis Google Search Console" (option disponible après connexion GSC)
+3. Ou soumettre manuellement : `https://blog.jeromesoyer.fr/sitemap.xml`
 
 ---
 
@@ -80,6 +95,41 @@
 | Soumission Reddit r/commandline, r/neovim, r/unixporn | HIGH | ⬜ |
 | Newsletter setup (Buttondown — GDPR-friendly) | LOW | ⬜ |
 | RSS améliorations (full content) | LOW | ⬜ |
+
+### Actions manuelles Phase 3
+
+#### A. Cross-post dev.to (priorité haute)
+1. Créer un compte sur [dev.to](https://dev.to) si pas encore fait (connexion GitHub)
+2. Settings → **Extensions** → coller le flux RSS : `https://blog.jeromesoyer.fr/index.xml`
+   - Dev.to peut importer automatiquement, ou publier manuellement
+3. **IMPORTANT** : pour chaque article publié sur dev.to, ajouter dans le front matter dev.to :
+   ```
+   canonical_url: https://blog.jeromesoyer.fr/posts/NOM-ARTICLE/
+   ```
+   → Cela garantit que Google attribue le SEO à TON blog, pas à dev.to
+
+**Ordre recommandé par potentiel d'engagement dev.to :**
+| Priorité | Article | Raison |
+|----------|---------|--------|
+| 1 | modern-cli-tools | Top bookmarks, large audience |
+| 2 | rtk | Niche AI devs, très pertinent |
+| 3 | neovim-setup | Evergreen, fort trafic sur dev.to |
+| 4 | nushell | Audience croissante |
+| 5 | chezmoi-vs-alternatives | Bonne recherche organique |
+| 6 | kitty-deep-dive | Terminal nerds |
+
+#### B. Hacker News — Show HN pour RTK
+- Poster dans [news.ycombinator.com/submit](https://news.ycombinator.com/submit)
+- Titre suggéré : `Show HN: RTK – A Rust CLI proxy that reduces LLM token usage by 60-90%`
+- URL : `https://blog.jeromesoyer.fr/posts/rtk/`
+- Meilleur moment : mardi-jeudi, 9h-12h heure US Est
+
+#### C. Reddit
+- **r/commandline** → modern-cli-tools, nushell
+- **r/neovim** → neovim-setup
+- **r/unixporn** → screenshot de ton setup + lien vers kitty-deep-dive
+- **r/rust** → rtk
+- **r/MacOS** → raycast-kitty, kitty-deep-dive
 
 ---
 

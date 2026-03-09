@@ -41,11 +41,11 @@ languages:
           weight: 50
     params:
       homeInfoParams:
-        Title: "Hey, I'm Jerome"
+        Title: "$ whoami"
         Content: >
-          Developer obsessed with clean tooling, reproducible environments, and
-          automation that makes future-you grateful. I write about dotfiles,
-          terminals, CLI tools — the things I actually use every day.
+          Jerome Soyer. VP Sales Engineering @Varonis — I break into things professionally,
+          so I'm picky about what I let into my own setup.
+          This is where I write about the tools that made the cut.
 
   fr:
     languageName: "FR"
@@ -74,11 +74,11 @@ languages:
           weight: 50
     params:
       homeInfoParams:
-        Title: "Salut, je suis Jerome"
+        Title: "$ whoami"
         Content: >
-          Développeur passionné par les environnements bien configurés,
-          l'automatisation et les outils CLI. J'écris sur les dotfiles,
-          les terminaux et tout ce que j'utilise vraiment au quotidien.
+          Jerome Soyer. VP Sales Engineering @Varonis — je casse des choses professionnellement,
+          donc je suis exigeant sur ce que je laisse entrer dans mon setup.
+          C'est ici que j'écris sur les outils qui ont passé la sélection.
 
 params:
   env: production

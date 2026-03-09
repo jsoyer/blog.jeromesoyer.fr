@@ -123,6 +123,13 @@ params:
   socialIcons:
     - name: github
       url: "https://github.com/jsoyer"
+    - name: twitter
+      url: "https://twitter.com/JeromeSoyer"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/jeromesoyer/"
+
+  images:
+    - /og-default.svg
 
   cover:
     hidden: false

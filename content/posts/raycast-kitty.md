@@ -26,12 +26,21 @@ This isn't just a "Launch Kitty" button. We’re talking deep integration:
 
 You can define **Launch Configurations** in YAML. Imagine one command that opens Neovim, your Dev Server, and your logs in a perfectly split layout. Launched with one click from Raycast. It’s so efficient it’s almost illegal.
 
-### 🛠 The Road to the Store (and beyond!)
+### 🛠 Get It
 
-The extension is currently **undergoing validation** by the Raycast team on their official `raycast/extensions` GitHub repo. It's a rigorous process of linting, building, and manual review.
+The extension is available on **[GitHub](https://github.com/jsoyer/raycast-kitty)** — install it directly via Raycast's "Install Extension" from URL feature, or clone and build it yourself.
 
-But I'm not stopping there. The future of this project is all about **AI and "Vibe Coding"**. I plan to introduce smart features to help you manage your layouts and tabs through natural language. I want the extension to understand the *vibe* of your current task and prep your Kitty environment accordingly.
+```bash
+# Clone and install locally
+git clone https://github.com/jsoyer/raycast-kitty
+cd raycast-kitty
+npm install && npm run build
+```
+
+### What's Next
+
+The roadmap is all about **AI and "Vibe Coding"**: smart features that understand the *context* of your current task and prep your Kitty environment accordingly. Natural language layout management. An extension that knows you're in a "debug prod incident" vibe and opens the right tabs automatically.
 
 ---
 
-**Ready to upgrade?** While waiting for the official approval, you can check the source code on my GitHub. Stay tuned for the AI-powered future of Kitty management!
+**Source code**: [github.com/jsoyer/raycast-kitty](https://github.com/jsoyer/raycast-kitty)

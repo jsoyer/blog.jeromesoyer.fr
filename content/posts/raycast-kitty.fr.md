@@ -26,12 +26,20 @@ On n'est pas juste sur un bouton "Ouvrir Kitty" :
 
 Définissez vos **Configurations de Lancement** en YAML. Imaginez une seule commande qui ouvre Neovim, votre serveur de dev et vos logs dans un layout parfaitement splitté. Le tout lancé en un clic depuis Raycast.
 
-### 🛠 Direction le Store (et après ?)
+### 🛠 Comment l'installer
 
-L'extension est actuellement **en cours de validation** par l'équipe Raycast sur leur dépôt officiel. C'est un rituel de passage sérieux (linting, build, revue de code) pour garantir la qualité.
+L'extension est disponible sur **[GitHub](https://github.com/jsoyer/raycast-kitty)** — installez-la directement via la fonctionnalité "Install Extension from URL" de Raycast, ou clonez et buildez vous-même.
 
-Mais ce n'est que le début. Pour la suite, je compte injecter une dose d'**IA et de "Vibe Coding"**. L'idée est d'automatiser la gestion de vos environnements en fonction de votre contexte et de vos intentions, le tout avec une approche très orientée "vibe" pour que l'outil s'adapte à vous, et non l'inverse.
+```bash
+git clone https://github.com/jsoyer/raycast-kitty
+cd raycast-kitty
+npm install && npm run build
+```
+
+### La suite
+
+La roadmap tourne autour de l'**IA et du "Vibe Coding"** : des fonctionnalités intelligentes qui comprennent le *contexte* de votre tâche en cours et préparent votre environnement Kitty en conséquence. Gestion des layouts en langage naturel. Une extension qui sait que vous êtes en mode "debug incident prod" et ouvre les bons onglets automatiquement.
 
 ---
 
-**Prêt à passer à la vitesse supérieure ?** En attendant la validation officielle, vous pouvez aller jeter un œil au code source sur mon GitHub. Restez branchés pour découvrir le futur du "vibe coding" appliqué à Kitty !
+**Code source** : [github.com/jsoyer/raycast-kitty](https://github.com/jsoyer/raycast-kitty)

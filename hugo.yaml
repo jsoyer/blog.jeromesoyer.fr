@@ -129,14 +129,14 @@ params:
     enabled: false
 
   socialIcons:
+    - name: strava
+      url: "https://www.strava.com/athletes/33948993"
     - name: github
       url: "https://github.com/jsoyer"
     - name: twitter
       url: "https://twitter.com/JeromeSoyer"
     - name: linkedin
       url: "https://www.linkedin.com/in/jeromesoyer/"
-    - name: strava
-      url: "https://www.strava.com/athletes/33948993"
 
   images:
     - /og-default.png

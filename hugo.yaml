@@ -121,9 +121,7 @@ params:
     safari_pinned_tab: /favicon.svg
 
   label:
-    text: "The Least Privilege Life"
-    icon: /favicon.svg
-    iconHeight: 35
+    text: "~ The Least Privilege Life"
 
   profileMode:
     enabled: false

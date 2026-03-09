@@ -1,188 +1,193 @@
 /* ============================================================
-   Custom theme — Catppuccin Mocha inspired
-   Targeting: blog.jeromesoyer.fr / The Least Privilege Life
+   Custom theme — blog.jeromesoyer.fr
+   Catppuccin Latte (light) + Mocha (dark)
    ============================================================ */
 
-/* --- Fonts ------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
 
-/* --- Dark mode palette (Catppuccin Mocha) ------------------ */
+/* ----------------------------------------------------------
+   Color variables — light mode (Catppuccin Latte)
+   Override PaperMod's :root defaults
+---------------------------------------------------------- */
 :root {
-  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
-}
-
-.dark {
-  --theme:    #1e1e2e;   /* base */
-  --entry:    #181825;   /* mantle */
-  --primary:  #cdd6f4;   /* text */
-  --secondary:#a6adc8;   /* subtext1 */
-  --tertiary: #313244;   /* surface0 */
-  --content:  #cdd6f4;   /* text */
-  --code-bg:  #181825;   /* mantle */
-  --border:   #45475a;   /* surface1 */
-  --accent:   #a6e3a1;   /* green */
-  --accent2:  #89b4fa;   /* blue */
-  --accent3:  #cba6f7;   /* mauve */
-}
-
-/* Light mode — clean warm white */
-body:not(.dark) {
-  --theme:    #eff1f5;   /* latte base */
+  --theme:    #eff1f5;
   --entry:    #ffffff;
-  --primary:  #4c4f69;   /* latte text */
-  --secondary:#6c6f85;   /* latte subtext0 */
-  --tertiary: #dce0e8;   /* latte surface0 */
+  --primary:  #4c4f69;
+  --secondary:#6c6f85;
+  --tertiary: #dce0e8;
   --content:  #4c4f69;
-  --code-bg:  #e6e9ef;   /* latte mantle */
+  --hljs-bg:  #e6e9ef;
+  --code-bg:  #e6e9ef;
   --border:   #ccd0da;
-  --accent:   #40a02b;   /* latte green */
-  --accent2:  #1e66f5;   /* latte blue */
-  --accent3:  #8839ef;   /* latte mauve */
 }
 
-/* --- Base typography --------------------------------------- */
+/* ----------------------------------------------------------
+   Color variables — dark mode (Catppuccin Mocha)
+   .dark is added to <body> by PaperMod's toggle
+---------------------------------------------------------- */
+.dark {
+  --theme:    #1e1e2e;
+  --entry:    #181825;
+  --primary:  #cdd6f4;
+  --secondary:#a6adc8;
+  --tertiary: #313244;
+  --content:  #cdd6f4;
+  --hljs-bg:  #11111b;
+  --code-bg:  #181825;
+  --border:   #45475a;
+}
+
+/* ----------------------------------------------------------
+   Typography
+---------------------------------------------------------- */
 body {
-  font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.75;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
+  font-size: 16px;
 }
 
-/* --- Header / Nav ------------------------------------------ */
-.nav {
-  background: var(--theme);
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-
-.dark .nav {
-  background: rgba(30, 30, 46, 0.85);
-}
-
-.logo a,
-.logo a:visited {
-  font-family: var(--font-mono);
+/* ----------------------------------------------------------
+   Logo — terminal style
+---------------------------------------------------------- */
+.logo a {
+  font-family: 'JetBrains Mono', monospace;
   font-weight: 600;
   letter-spacing: -0.02em;
-  color: var(--accent) !important;
 }
 
 .logo a::before {
   content: '$ ';
-  opacity: 0.5;
+  color: #a6e3a1;
+  opacity: 0.8;
 }
 
+.dark .logo a::before {
+  color: #a6e3a1;
+}
+
+body:not(.dark) .logo a::before {
+  color: #40a02b;
+}
+
+/* ----------------------------------------------------------
+   Nav links
+---------------------------------------------------------- */
 #menu a {
   font-size: 0.875rem;
   font-weight: 500;
-  letter-spacing: 0.02em;
   padding: 4px 10px;
   border-radius: 6px;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: background 0.15s, color 0.15s;
 }
 
 #menu a:hover {
   background: var(--tertiary);
-  color: var(--accent);
 }
 
-/* --- Home info banner -------------------------------------- */
+/* Language switcher */
+.lang-btn-sel,
+.lang-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  padding: 3px 8px;
+}
+
+/* ----------------------------------------------------------
+   Home info banner
+---------------------------------------------------------- */
 .home-info-content {
-  border-left: 3px solid var(--accent);
+  border-left: 3px solid #a6e3a1;
   padding-left: 1.25rem;
 }
 
-.home-info-content h1 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
+body:not(.dark) .home-info-content {
+  border-left-color: #40a02b;
 }
 
-/* --- Post cards -------------------------------------------- */
+/* ----------------------------------------------------------
+   Post cards
+---------------------------------------------------------- */
 .post-entry {
-  background: var(--entry);
+  border-radius: 10px;
   border: 1px solid var(--border);
-  border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 1rem;
-  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
   position: relative;
-  overflow: hidden;
-}
-
-.post-entry::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 3px;
-  height: 100%;
-  background: var(--accent);
-  opacity: 0;
-  transition: opacity 0.2s ease;
 }
 
 .post-entry:hover {
-  border-color: var(--accent);
+  border-color: #89b4fa;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
-.post-entry:hover::before {
-  opacity: 1;
+.dark .post-entry:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 .entry-header h2 {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 600;
   line-height: 1.4;
-  margin-bottom: 0.5rem;
-  transition: color 0.2s ease;
+  transition: color 0.15s;
 }
 
 .post-entry:hover .entry-header h2 {
-  color: var(--accent);
+  color: #89b4fa;
 }
 
 .entry-content {
   font-size: 0.925rem;
   color: var(--secondary);
-  line-height: 1.6;
+  line-height: 1.65;
+  margin-top: 0.5rem;
 }
 
 .entry-footer {
-  font-family: var(--font-mono);
-  font-size: 0.775rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
   color: var(--secondary);
   margin-top: 0.75rem;
 }
 
-/* --- Tags / Categories ------------------------------------ */
+/* ----------------------------------------------------------
+   Tags
+---------------------------------------------------------- */
 .post-tags a,
 .terms-tags a {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.73rem;
   background: var(--tertiary);
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: 5px;
   padding: 2px 8px;
-  color: var(--secondary);
-  transition: all 0.2s ease;
+  transition: background 0.15s, color 0.15s;
 }
 
 .post-tags a:hover,
 .terms-tags a:hover {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: #89b4fa;
+  border-color: #89b4fa;
   color: #1e1e2e;
 }
 
-/* --- Article content --------------------------------------- */
+/* ----------------------------------------------------------
+   Article content — readability
+---------------------------------------------------------- */
 .post-content {
-  font-size: 1rem;
-  line-height: 1.8;
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+.post-content p {
+  margin-bottom: 1.4rem;
+}
+
+.post-content li {
+  margin-bottom: 0.4rem;
+  line-height: 1.75;
 }
 
 .post-content h1,
@@ -192,88 +197,98 @@ body {
   font-weight: 700;
   letter-spacing: -0.02em;
   margin-top: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.9rem;
   scroll-margin-top: 80px;
+  line-height: 1.3;
 }
 
 .post-content h2 {
   font-size: 1.5rem;
-  border-bottom: 1px solid var(--border);
   padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
 }
 
 .post-content h3 {
   font-size: 1.2rem;
-  color: var(--accent2);
 }
 
 .post-content a {
-  color: var(--accent2);
-  text-decoration: underline;
+  color: #89b4fa;
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
-  transition: color 0.2s ease;
 }
 
-.post-content a:hover {
-  color: var(--accent);
+.dark .post-content a {
+  color: #89b4fa;
 }
 
-/* --- Inline code ------------------------------------------ */
-.post-content code {
-  font-family: var(--font-mono);
+body:not(.dark) .post-content a {
+  color: #1e66f5;
+}
+
+/* ----------------------------------------------------------
+   Inline code
+---------------------------------------------------------- */
+.post-content :not(pre) > code {
+  font-family: 'JetBrains Mono', monospace;
   font-size: 0.875em;
   background: var(--code-bg);
   border: 1px solid var(--border);
   border-radius: 4px;
-  padding: 0.15em 0.4em;
-  color: var(--accent3);
+  padding: 0.15em 0.45em;
 }
 
-/* --- Code blocks ------------------------------------------ */
-.post-content pre {
+.dark .post-content :not(pre) > code {
+  color: #cba6f7;
+}
+
+body:not(.dark) .post-content :not(pre) > code {
+  color: #8839ef;
+}
+
+/* ----------------------------------------------------------
+   Code blocks — container only (content styled by chroma)
+---------------------------------------------------------- */
+.post-content .highlight {
   border-radius: 10px;
   border: 1px solid var(--border);
   overflow: hidden;
-  margin: 1.5rem 0;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  margin: 1.75rem 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 }
 
-.dark .post-content pre {
-  background: #11111b !important;  /* Catppuccin Crust */
+.dark .post-content .highlight {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  border-color: #45475a;
 }
 
-.post-content pre code {
+.post-content .highlight pre {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  overflow-x: auto;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 0.875rem;
-  background: none;
+  line-height: 1.65;
+  border-radius: 0;
   border: none;
-  padding: 0;
-  color: inherit;
 }
 
-/* Code block copy button */
-.copy-code-button {
-  font-family: var(--font-mono);
+/* Copy button */
+.copy-code-btn,
+button[aria-label="copy code to clipboard"] {
+  font-family: 'JetBrains Mono', monospace !important;
   font-size: 0.7rem !important;
-  border-radius: 6px !important;
-  background: var(--tertiary) !important;
-  border: 1px solid var(--border) !important;
-  color: var(--secondary) !important;
-  transition: all 0.2s ease !important;
+  border-radius: 5px !important;
 }
 
-.copy-code-button:hover {
-  background: var(--accent) !important;
-  color: #1e1e2e !important;
-  border-color: var(--accent) !important;
-}
-
-/* --- Tables ----------------------------------------------- */
+/* ----------------------------------------------------------
+   Tables
+---------------------------------------------------------- */
 .post-content table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9rem;
-  margin: 1.5rem 0;
+  margin: 1.75rem 0;
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--border);
@@ -281,14 +296,14 @@ body {
 
 .post-content th {
   background: var(--tertiary);
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.05em;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
   padding: 10px 16px;
-  text-align: left;
   color: var(--secondary);
+  text-align: left;
 }
 
 .post-content td {
@@ -300,58 +315,22 @@ body {
   background: var(--tertiary);
 }
 
-/* --- Blockquote ------------------------------------------- */
+/* ----------------------------------------------------------
+   Blockquote
+---------------------------------------------------------- */
 .post-content blockquote {
-  border-left: 3px solid var(--accent3);
+  border-left: 3px solid #cba6f7;
   background: var(--entry);
-  margin: 1.5rem 0;
-  padding: 1rem 1.25rem;
+  margin: 1.75rem 0;
+  padding: 1rem 1.5rem;
   border-radius: 0 8px 8px 0;
+  color: var(--secondary);
   font-style: italic;
-  color: var(--secondary);
 }
 
-/* --- Post header ------------------------------------------ */
-.post-header {
-  margin-bottom: 2rem;
-}
-
-.post-title {
-  font-size: 2rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.25;
-}
-
-.post-meta {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--secondary);
-  margin-top: 0.75rem;
-}
-
-.post-meta .post-author::before {
-  content: '> ';
-  color: var(--accent);
-}
-
-/* --- Breadcrumbs ------------------------------------------ */
-.breadcrumbs {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--secondary);
-}
-
-.breadcrumbs a {
-  color: var(--accent2);
-}
-
-.breadcrumbs .separator {
-  margin: 0 0.3rem;
-  opacity: 0.4;
-}
-
-/* --- Table of contents ------------------------------------ */
+/* ----------------------------------------------------------
+   TOC
+---------------------------------------------------------- */
 .toc {
   background: var(--entry);
   border: 1px solid var(--border);
@@ -361,113 +340,68 @@ body {
   margin-bottom: 2rem;
 }
 
-.toc details summary {
-  font-family: var(--font-mono);
+.toc details > summary {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
   font-weight: 600;
-  font-size: 0.8rem;
-  letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--accent);
+  letter-spacing: 0.08em;
+  color: #a6e3a1;
   cursor: pointer;
+}
+
+body:not(.dark) .toc details > summary {
+  color: #40a02b;
 }
 
 .toc ul {
   margin-top: 0.75rem;
+  padding-left: 1rem;
 }
 
-.toc a {
+.toc li {
+  margin-bottom: 0.25rem;
+}
+
+/* ----------------------------------------------------------
+   Post title & meta
+---------------------------------------------------------- */
+.post-title {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+.post-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
   color: var(--secondary);
-  transition: color 0.2s ease;
+  margin-top: 0.6rem;
+  gap: 1rem;
 }
 
-.toc a:hover {
-  color: var(--accent);
-}
-
-/* --- Post navigation (prev/next) -------------------------- */
-.paginav {
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  overflow: hidden;
-  margin-top: 2rem;
-}
-
-.paginav a {
-  padding: 1rem 1.25rem;
-  transition: background 0.2s ease;
-}
-
-.paginav a:hover {
-  background: var(--tertiary);
-}
-
-.paginav-prev .paginav-title::before { content: '← '; }
-.paginav-next .paginav-title::after  { content: ' →'; }
-
-.paginav-title {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--accent);
-}
-
-/* --- Footer ----------------------------------------------- */
+/* ----------------------------------------------------------
+   Footer
+---------------------------------------------------------- */
 .footer {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
   color: var(--secondary);
-  border-top: 1px solid var(--border);
-  padding-top: 1.5rem;
 }
 
-/* --- Search ----------------------------------------------- */
-#searchbox input {
-  font-family: var(--font-mono);
-  background: var(--entry);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  color: var(--primary);
-  padding: 0.6rem 1rem;
-  transition: border-color 0.2s ease;
-  width: 100%;
-}
+/* ----------------------------------------------------------
+   Scrollbar
+---------------------------------------------------------- */
+::-webkit-scrollbar        { width: 5px; height: 5px; }
+::-webkit-scrollbar-track  { background: var(--theme); }
+::-webkit-scrollbar-thumb  { background: var(--tertiary); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--secondary); }
 
-#searchbox input:focus {
-  outline: none;
-  border-color: var(--accent);
-}
-
-/* --- Scrollbar (webkit) ----------------------------------- */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--theme);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--tertiary);
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--secondary);
-}
-
-/* --- Selection -------------------------------------------- */
+/* ----------------------------------------------------------
+   Selection
+---------------------------------------------------------- */
 ::selection {
-  background: var(--accent3);
+  background: #cba6f7;
   color: #1e1e2e;
-}
-
-/* --- Smooth transitions ----------------------------------- */
-body,
-.post-entry,
-#menu a,
-.post-content a,
-.post-content code {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }

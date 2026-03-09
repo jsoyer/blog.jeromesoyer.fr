@@ -1,9 +1,9 @@
 baseURL: https://blog.jeromesoyer.fr/
-languageCode: en-us
 title: The Least Privilege Life
 theme: ["PaperMod"]
 paginate: 10
 
+defaultContentLanguage: en
 enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
@@ -13,10 +13,77 @@ minify:
   disableXML: true
   minifyOutput: true
 
+languages:
+  en:
+    languageName: "EN"
+    weight: 1
+    menu:
+      main:
+        - identifier: posts
+          name: Posts
+          url: /posts/
+          weight: 10
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 20
+        - identifier: about
+          name: About
+          url: /about/
+          weight: 30
+        - identifier: uses
+          name: Uses
+          url: /uses/
+          weight: 40
+        - identifier: search
+          name: Search
+          url: /search/
+          weight: 50
+    params:
+      homeInfoParams:
+        Title: "Hey, I'm Jerome"
+        Content: >
+          Developer obsessed with clean tooling, reproducible environments, and
+          automation that makes future-you grateful. I write about dotfiles,
+          terminals, CLI tools — the things I actually use every day.
+
+  fr:
+    languageName: "FR"
+    weight: 2
+    menu:
+      main:
+        - identifier: posts
+          name: Articles
+          url: /fr/posts/
+          weight: 10
+        - identifier: tags
+          name: Tags
+          url: /fr/tags/
+          weight: 20
+        - identifier: about
+          name: À propos
+          url: /fr/about/
+          weight: 30
+        - identifier: uses
+          name: Outils
+          url: /fr/uses/
+          weight: 40
+        - identifier: search
+          name: Recherche
+          url: /fr/search/
+          weight: 50
+    params:
+      homeInfoParams:
+        Title: "Salut, je suis Jerome"
+        Content: >
+          Développeur passionné par les environnements bien configurés,
+          l'automatisation et les outils CLI. J'écris sur les dotfiles,
+          les terminaux et tout ce que j'utilise vraiment au quotidien.
+
 params:
   env: production
   author: Jerome Soyer
-  description: "A blog about developer tools, automation, and living with the least privilege you actually need."
+  description: "A blog about developer tools, automation, and the least privilege you actually need."
   keywords: [devops, dotfiles, terminal, automation, linux, macos, cli]
 
   defaultTheme: auto
@@ -53,13 +120,6 @@ params:
   profileMode:
     enabled: false
 
-  homeInfoParams:
-    Title: "Hey, I'm Jerome 👋"
-    Content: >
-      I'm a developer obsessed with clean tooling, reproducible environments, and
-      the kind of automation that makes future-you grateful.
-      I write about dotfiles, terminals, CLI tools, and the things I actually use every day.
-
   socialIcons:
     - name: github
       url: "https://github.com/jsoyer"
@@ -84,29 +144,6 @@ params:
     limit: 10
     keys: ["title", "permalink", "summary", "content"]
 
-menu:
-  main:
-    - identifier: posts
-      name: Posts
-      url: /posts/
-      weight: 10
-    - identifier: tags
-      name: Tags
-      url: /tags/
-      weight: 20
-    - identifier: about
-      name: About
-      url: /about/
-      weight: 30
-    - identifier: uses
-      name: Uses
-      url: /uses/
-      weight: 40
-    - identifier: search
-      name: Search
-      url: /search/
-      weight: 50
-
 outputs:
   home:
     - HTML
@@ -118,9 +155,8 @@ markup:
     renderer:
       unsafe: true
   highlight:
-    noClasses: false
-    anchorLineNos: true
+    noClasses: true
     codeFences: true
     guessSyntax: true
-    lineNos: true
-    style: monokai
+    lineNos: false
+    style: dracula

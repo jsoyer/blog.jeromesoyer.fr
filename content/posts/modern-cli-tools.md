@@ -222,30 +222,4 @@ cargo install git-delta  # not yet in Fedora repos
 
 ---
 
-# [FR] Les outils CLI modernes pour remplacer vos classiques en 2026
-
-Les outils Unix sont vieux. `ls` date de 1971. `grep` de 1973. Ils fonctionnent, mais ils ont été conçus pour un monde sans couleurs, sans Git, sans processeurs multi-cœurs, et sans développeurs qui attendent une bonne UX.
-
-L'écosystème Rust a changé la donne. Voici ceux que j'utilise vraiment tous les jours.
-
-| Classique | Remplacement | Gain principal |
-|-----------|-------------|----------------|
-| `ls` | `eza` | Icons, git status, tree lisible |
-| `cat` | `bat` | Syntax highlighting, gutter diff |
-| `grep` | `ripgrep` | 5-10x plus rapide, respecte .gitignore |
-| `find` | `fd` | Syntaxe intuitive, parallèle |
-| `cd` | `zoxide` | Navigation intelligente par apprentissage |
-| `history` | `atuin` | Base de données searchable, sync multi-machine |
-| `top` | `btop` | Interface lisible, souris, stats complètes |
-| `du` | `dust` | Vue arborescente visuelle |
-| `git diff` | `delta` | Syntax highlighting, side-by-side |
-
-Pour l'install complète sur macOS :
-
-```bash
-brew install eza bat ripgrep fd zoxide atuin btop dust git-delta jq yq mise
-```
-
----
-
-*Tous ces outils sont configurés et gérés via mes [dotfiles chezmoi](https://github.com/jsoyer)*
+*All these tools are configured and managed via my [chezmoi dotfiles](https://github.com/jsoyer)*

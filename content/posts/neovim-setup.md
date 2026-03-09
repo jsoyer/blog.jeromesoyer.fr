@@ -242,31 +242,4 @@ Every machine gets the same config via `chezmoi update`.
 
 ---
 
-# [FR] Mon Setup Neovim en 2026 : LSP, Plugins, et un Workflow qui Fonctionne
-
-Je ne vais pas vous convaincre d'utiliser Neovim. Si vous lisez ça, vous avez déjà décidé. Voici le guide pratique d'un setup qui fonctionne — rapide, maintenable, sans 400 plugins qui se battent.
-
-### Structure
-
-Un fichier par plugin. Quand quelque chose casse, vous savez exactement où chercher.
-
-### Les plugins qui comptent vraiment
-
-- **lazy.nvim** — chargement à la demande, startup < 50ms
-- **nvim-lspconfig + mason** — serveurs de langages gérés automatiquement
-- **Telescope** — fuzzy finder pour tout (fichiers, grep, buffers, git)
-- **oil.nvim** — explorateur de fichiers comme un buffer éditable
-- **harpoon** — navigation instantanée entre 4-5 fichiers par projet
-- **gitsigns** — diff Git inline, blame, navigation de hunks
-- **treesitter** — syntaxe et text objects basés sur le vrai arbre syntaxique
-
-### Temps de démarrage
-
-Avec le lazy loading, moins de 50ms. Mesurez avec :
-```bash
-hyperfine "nvim --headless +qa" --warmup 3
-```
-
----
-
-*Config complète dans mes [dotfiles](https://github.com/jsoyer)*
+*Full config available in my [dotfiles](https://github.com/jsoyer)*

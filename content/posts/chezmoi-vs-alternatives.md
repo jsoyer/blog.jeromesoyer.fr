@@ -170,31 +170,4 @@ Want maximum power? → chezmoi
 
 ---
 
-# [FR] chezmoi vs yadm vs stow : lequel choisir en 2026 ?
-
-J'ai utilisé les trois. J'ai choisi chezmoi. Mais la vraie réponse est : *ça dépend de ce que vous voulez faire*.
-
-### Le problème à résoudre
-
-Les dotfiles sont dispersés, vous voulez les versionner, les synchroniser entre machines, avec des valeurs différentes par OS, et sans mettre vos secrets dans Git. Chaque outil résout les deux premiers problèmes facilement. C'est sur les trois suivants qu'ils divergent.
-
-### En bref
-
-- **Stow** : symlinks, zéro magie, parfait pour une seule machine ou plusieurs machines identiques
-- **yadm** : wrapper Git, courbe d'apprentissage minimale, alternates par filename pour les variations
-- **chezmoi** : machine à états avec templates Go, overkill pour une machine, indispensable pour 5+ machines sur 4 OS
-
-### Mon choix : chezmoi
-
-Le système de templates est décisif quand on tourne sur macOS, Fedora, Fedora Atomic, Raspberry Pi et Windows. Un seul fichier `.zshrc.tmpl` avec des conditionnelles remplace la maintenance de 5 fichiers séparés.
-
-L'auto-commit/push est la cerise : `chezmoi re-add` et mes changements sont dans Git, poussés sur GitHub, disponibles sur toutes mes autres machines.
-
-Guide rapide :
-- Une machine → **Stow** ou **yadm**
-- Plusieurs machines, même OS → **yadm**
-- Plusieurs machines, plusieurs OS → **chezmoi**
-
----
-
-*Voir [mon setup chezmoi complet](/posts/dotfiles/) pour l'implémentation détaillée*
+*See [my full chezmoi setup](/posts/dotfiles/) for the detailed implementation*

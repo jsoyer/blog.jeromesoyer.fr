@@ -38,10 +38,3 @@ I've spent years perfecting my setup across macOS, Fedora, and Raspberry Pi. At 
 
 *All opinions are my own. I write about what I actually use.*
 
----
-
-## À propos
-
-Je suis développeur, passionné par les environnements de travail bien conçus — le shell, l'éditeur, les outils, et l'automatisation qui fait tenir tout ça ensemble.
-
-Ce blog parle de ce que j'utilise vraiment au quotidien : dotfiles, outils CLI, setups cross-platform, et tout ce qui rend le travail moins douloureux et plus efficace.

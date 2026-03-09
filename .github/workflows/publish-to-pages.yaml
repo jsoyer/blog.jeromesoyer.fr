@@ -24,6 +24,17 @@ jobs:
           hugo-version: "latest"
           extended: true
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Pillow
+        run: pip install Pillow
+
+      - name: Generate cover images
+        run: python3 scripts/generate_covers.py --webp
+
       - run: hugo --minify
 
       - name: Publish

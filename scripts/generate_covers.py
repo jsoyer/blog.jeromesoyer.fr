@@ -36,7 +36,11 @@ TEXT   = (205, 214, 244)  # #cdd6f4  — primary text
 SUB0   = (166, 173, 200)  # #a6adc8  — subtitle text
 
 # ── Font paths ─────────────────────────────────────────────────────────────────
-_FONT_DIR = Path.home() / ".local/share/fonts"
+# Prefer fonts bundled alongside this script (works in CI).
+# Fall back to user's local font directory for local runs.
+_SCRIPT_FONTS = Path(__file__).parent / "fonts"
+_LOCAL_FONTS  = Path.home() / ".local/share/fonts"
+_FONT_DIR     = _SCRIPT_FONTS if (_SCRIPT_FONTS / "JetBrainsMonoNerdFont-Bold.ttf").exists() else _LOCAL_FONTS
 FONT_BOLD   = str(_FONT_DIR / "JetBrainsMonoNerdFont-Bold.ttf")
 FONT_MEDIUM = str(_FONT_DIR / "JetBrainsMonoNerdFont-Medium.ttf")
 FONT_REG    = str(_FONT_DIR / "JetBrainsMonoNerdFont-Regular.ttf")

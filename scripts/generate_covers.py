@@ -64,7 +64,7 @@ ARTICLES: list[tuple[str, str, str, list[str], str, str]] = [
         "60-90% token savings. One binary.",
         ["Rust", "AI", "Tools"],
         "#f38ba8",   # Red
-        "$_",
+        ">>",
     ),
     (
         "neovim-setup",

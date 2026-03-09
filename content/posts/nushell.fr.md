@@ -7,7 +7,7 @@ description: "Après des années de zsh, j'ai changé mon shell principal pour N
 categories: ["Tooling", "Terminal"]
 tags: ["nushell", "shell", "terminal", "productivity", "cli", "zsh"]
 cover:
-  image: /images/covers/nushell.png
+  image: /images/covers/nushell.webp
   alt: "Why I Switched to Nushell"
 ---
 

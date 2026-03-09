@@ -7,7 +7,7 @@ description: "Beyond just opening tabs — Kitty's kittens, layouts, scripting, 
 categories: ["Tooling", "Terminal"]
 tags: ["kitty", "terminal", "productivity", "gpu", "cli", "automation"]
 cover:
-  image: /images/covers/kitty-deep-dive.png
+  image: /images/covers/kitty-deep-dive.webp
   alt: "Kitty Terminal Deep Dive"
 ---
 

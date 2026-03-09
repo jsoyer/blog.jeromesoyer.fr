@@ -7,7 +7,7 @@ categories: ["Tooling"]
 author: "Jerome Soyer"
 description: "Comment j'ai transformé la gestion de mon terminal en une machine à productivité ronronnante grâce à Raycast et Kitty."
 cover:
-  image: /images/covers/raycast-kitty.png
+  image: /images/covers/raycast-kitty.webp
   alt: "Extension Raycast Kitty"
 ---
 

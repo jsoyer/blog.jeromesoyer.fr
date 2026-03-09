@@ -7,7 +7,7 @@ description: "A practical guide to my Neovim configuration — lazy.nvim, LSP se
 categories: ["Tooling", "Editor"]
 tags: ["neovim", "nvim", "lua", "lsp", "productivity", "editor", "cli"]
 cover:
-  image: /images/covers/neovim-setup.png
+  image: /images/covers/neovim-setup.webp
   alt: "Neovim Setup 2026"
 ---
 

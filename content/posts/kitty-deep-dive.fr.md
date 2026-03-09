@@ -7,7 +7,7 @@ description: "Au-delà des onglets — les kittens, les layouts, le scripting, e
 categories: ["Tooling", "Terminal"]
 tags: ["kitty", "terminal", "productivity", "gpu", "cli", "automation"]
 cover:
-  image: /images/covers/kitty-deep-dive.png
+  image: /images/covers/kitty-deep-dive.webp
   alt: "Kitty Terminal Deep Dive"
 ---
 

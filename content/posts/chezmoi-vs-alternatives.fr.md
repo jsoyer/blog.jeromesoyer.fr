@@ -7,7 +7,7 @@ description: "Une comparaison pratique des trois gestionnaires de dotfiles les p
 categories: ["DevOps", "Tooling"]
 tags: ["chezmoi", "dotfiles", "yadm", "stow", "automation", "linux", "macos"]
 cover:
-  image: /images/covers/chezmoi-vs-alternatives.png
+  image: /images/covers/chezmoi-vs-alternatives.webp
   alt: "chezmoi vs yadm vs stow"
 ---
 

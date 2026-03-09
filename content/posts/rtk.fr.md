@@ -7,7 +7,7 @@ description: "Comment j'ai construit un proxy CLI en Rust qui réduit la consomm
 categories: ["Tooling", "AI"]
 tags: ["rust", "cli", "llm", "claude", "ai", "productivity", "tokens", "automation"]
 cover:
-  image: /images/covers/rtk.png
+  image: /images/covers/rtk.webp
   alt: "RTK: Stop Burning Tokens"
 ---
 

@@ -7,7 +7,7 @@ description: "The definitive list of modern CLI replacements that are faster, fr
 categories: ["Tooling", "CLI"]
 tags: ["cli", "terminal", "productivity", "linux", "macos", "tools", "automation"]
 cover:
-  image: /images/covers/modern-cli-tools.png
+  image: /images/covers/modern-cli-tools.webp
   alt: "Modern CLI Tools 2026"
 ---
 

@@ -7,7 +7,7 @@ description: "Un guide complet pour gérer ses dotfiles de manière cross-platfo
 categories: ["DevOps", "Linux", "macOS"]
 tags: ["chezmoi", "dotfiles", "automation", "fedora", "macos", "linux"]
 cover:
-  image: /images/covers/dotfiles.png
+  image: /images/covers/dotfiles.webp
   alt: "Dotfiles Revolution avec chezmoi"
 ---
 

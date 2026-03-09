@@ -43,8 +43,9 @@ languages:
       homeInfoParams:
         Title: "Hi, I'm Jerome."
         Content: >
-          I work in cybersecurity and I'm picky about my tools.
-          This is where I write about the ones that actually stuck.
+          VP Sales Engineering @Varonis by day — so yes, I know what bad opsec looks like.
+          Compulsive automator, dotfiles nerd, and builder of tools nobody asked for.
+          This blog is where I write down what actually works.
 
   fr:
     languageName: "FR"
@@ -75,8 +76,9 @@ languages:
       homeInfoParams:
         Title: "Salut, je suis Jerome."
         Content: >
-          Je travaille dans la cybersécurité et je suis exigeant sur mes outils.
-          C'est ici que j'écris sur ceux qui ont vraiment survécu.
+          VP Sales Engineering @Varonis le jour — donc oui, je sais à quoi ressemble une mauvaise opsec.
+          Automatiseur compulsif, fana des dotfiles, et constructeur d'outils que personne n'a demandés.
+          Ce blog, c'est là où j'écris ce qui marche vraiment.
 
 params:
   env: production

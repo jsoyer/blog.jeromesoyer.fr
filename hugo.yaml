@@ -41,11 +41,10 @@ languages:
           weight: 50
     params:
       homeInfoParams:
-        Title: "$ whoami"
+        Title: "Hi, I'm Jerome."
         Content: >
-          Jerome Soyer. VP Sales Engineering @Varonis — I break into things professionally,
-          so I'm picky about what I let into my own setup.
-          This is where I write about the tools that made the cut.
+          I work in cybersecurity and I'm picky about my tools.
+          This is where I write about the ones that actually stuck.
 
   fr:
     languageName: "FR"
@@ -74,11 +73,10 @@ languages:
           weight: 50
     params:
       homeInfoParams:
-        Title: "$ whoami"
+        Title: "Salut, je suis Jerome."
         Content: >
-          Jerome Soyer. VP Sales Engineering @Varonis — je casse des choses professionnellement,
-          donc je suis exigeant sur ce que je laisse entrer dans mon setup.
-          C'est ici que j'écris sur les outils qui ont passé la sélection.
+          Je travaille dans la cybersécurité et je suis exigeant sur mes outils.
+          C'est ici que j'écris sur ceux qui ont vraiment survécu.
 
 params:
   env: production

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 — {{ .Site.Title }}</title>
+  <style>
+    :root {
+      --bg:      #1e1e2e;
+      --surface: #181825;
+      --text:    #cdd6f4;
+      --subtle:  #6c7086;
+      --green:   #a6e3a1;
+      --red:     #f38ba8;
+      --border:  #313244;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .terminal {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      width: 100%;
+      max-width: 640px;
+      overflow: hidden;
+    }
+
+    .terminal-bar {
+      background: var(--border);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+    .dot-red    { background: #f38ba8; }
+    .dot-yellow { background: #f9e2af; }
+    .dot-green  { background: #a6e3a1; }
+
+    .terminal-title {
+      margin-left: auto;
+      font-size: 0.75rem;
+      color: var(--subtle);
+    }
+
+    .terminal-body {
+      padding: 2rem;
+      line-height: 2;
+    }
+
+    .prompt::before {
+      content: '$ ';
+      color: var(--green);
+    }
+
+    .error {
+      color: var(--red);
+    }
+
+    .error::before {
+      content: 'bash: ';
+      color: var(--subtle);
+    }
+
+    .big-404 {
+      font-size: 4rem;
+      font-weight: bold;
+      color: var(--border);
+      letter-spacing: -2px;
+      margin-bottom: 1.5rem;
+      line-height: 1;
+    }
+
+    .big-404 span {
+      color: var(--red);
+    }
+
+    .spacer { margin-top: 1.5rem; }
+
+    .home-link {
+      display: inline-block;
+      margin-top: 1.5rem;
+      color: var(--green);
+      text-decoration: none;
+      border: 1px solid var(--green);
+      border-radius: 6px;
+      padding: 6px 16px;
+      font-size: 0.875rem;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .home-link:hover {
+      background: var(--green);
+      color: #1e1e2e;
+    }
+
+    .home-link::before { content: '← '; }
+  </style>
+</head>
+<body>
+  <div class="terminal">
+    <div class="terminal-bar">
+      <div class="dot dot-red"></div>
+      <div class="dot dot-yellow"></div>
+      <div class="dot dot-green"></div>
+      <span class="terminal-title">zsh — 80×24</span>
+    </div>
+    <div class="terminal-body">
+      <div class="big-404">4<span>0</span>4</div>
+
+      <div class="prompt">cd {{ .RelPermalink }}</div>
+      <div class="error">cd: {{ .RelPermalink }}: No such file or directory</div>
+
+      <div class="spacer"></div>
+
+      <div class="prompt">sudo find / -name "this-page" 2>/dev/null</div>
+      <div style="color: var(--subtle); font-size: 0.85rem; padding-left: 1rem;">
+        find: permission denied (obviously)<br>
+        find: also: this page doesn't exist
+      </div>
+
+      <a href="{{ .Site.BaseURL }}" class="home-link">
+        {{ if eq .Site.Language.Lang "fr" }}Retour à l'accueil{{ else }}Back home{{ end }}
+      </a>
+    </div>
+  </div>
+</body>
+</html>

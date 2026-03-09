@@ -70,10 +70,11 @@ Plugins clés :
 
 ## Spécifique macOS
 
-- **[Aerospace](https://github.com/nikitabobko/AeroSpace)** — gestionnaire de fenêtres en tiling
-- **[Sketchybar](https://felixkratz.github.io/SketchyBar/)** — barre de statut personnalisée
-- **[Raycast](https://www.raycast.com/)** — lanceur d'applications + extensions (dont mon [extension Kitty](https://github.com/jsoyer))
+- **[Aerospace](https://github.com/nikitabobko/AeroSpace)** — gestionnaire de fenêtres en tiling. Piloté au clavier, config-as-code, sans interface graphique inutile.
+- **[Sketchybar](https://felixkratz.github.io/SketchyBar/)** — barre de statut entièrement scriptable
+- **[Raycast](https://www.raycast.com/)** — lanceur d'applications + extensions, dont ma propre **[extension Kitty](https://github.com/jsoyer/raycast-kitty)**
 - **[Homebrew](https://brew.sh/)** — gestionnaire de paquets
+- **[Wipey](https://github.com/jsoyer/Wipey)** — ma propre app Swift pour verrouiller clavier/trackpad/écran pendant le nettoyage
 
 ---
 
@@ -82,27 +83,37 @@ Plugins clés :
 - **[chezmoi](https://www.chezmoi.io/)** — gère tous les fichiers de config sur chaque machine
 - Sauvegardé sur Git, auto-commit + auto-push activés
 - Templates Go pour la config spécifique à chaque plateforme
-- Une seule commande de bootstrap pour passer de zéro à productif
+- Une seule commande de bootstrap pour passer de zéro à productif sur une nouvelle machine
 
-Voir mon [article sur les dotfiles](/posts/dotfiles/) pour le détail complet.
+Voir mon [article sur les dotfiles](/fr/posts/dotfiles/) pour le détail complet.
 
 ---
 
 ## Développement
 
 - **[Docker](https://www.docker.com/)** — containers pour tout ce que je ne veux pas polluer mon système
-- **[mise](https://mise.jdx.dev/)** (anciennement rtx) — gestionnaire de versions de runtimes (remplace nvm, rbenv, pyenv)
+- **[mise](https://mise.jdx.dev/)** — gestionnaire de versions de runtimes (remplace nvm, rbenv, pyenv, tous)
 - **[just](https://github.com/casey/just)** — lanceur de commandes, plus simple que les Makefiles
 - **[jq](https://stedolan.github.io/jq/)** / **[yq](https://github.com/mikefarah/yq)** — traitement JSON/YAML
+- **[RTK](https://github.com/jsoyer/rtk)** — mon propre proxy CLI qui réduit la consommation de tokens LLM de 60-90% sur les commandes dev
+
+---
+
+## Homelab (Raspberry Pi)
+
+- **[Paperless-ngx](https://github.com/paperless-ngx/paperless-ngx)** — gestion de documents, OCR, recherche plein texte
+- **[Grafana](https://grafana.com/)** + InfluxDB — dashboards de monitoring (dont les données de sommeil Philips Somneo)
+- **[UniFi](https://ui.com/)** — gestion réseau (oui, c'est surdimensionné pour une maison)
+- **[Legendary Minecraft](https://github.com/jsoyer/Legendary-Java-Minecraft-Geyser-Floodgate)** — serveur auto-hébergé Java + Bedrock
 
 ---
 
 ## Ce blog
 
 - **[Hugo](https://gohugo.io/)** — générateur de site statique
-- **[PaperMod](https://github.com/adityatelange/hugo-PaperMod)** — thème
+- **[PaperMod](https://github.com/adityatelange/hugo-PaperMod)** — thème avec CSS Catppuccin personnalisé
 - **[Cloudflare Pages](https://pages.cloudflare.com/)** — hébergement
-- **GitHub Actions** — CI/CD (build + déploiement au push sur main)
+- **GitHub Actions** — CI/CD (build + déploiement au push sur `main`)
 
 ---
 

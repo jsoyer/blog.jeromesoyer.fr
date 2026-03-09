@@ -1,0 +1,3 @@
+{{- if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "63ad8e33c61f4b9cb899e75292adc341"}'></script>
+{{- end }}

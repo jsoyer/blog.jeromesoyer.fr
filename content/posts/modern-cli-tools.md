@@ -8,7 +8,7 @@ categories: ["Tooling", "CLI"]
 tags: ["cli", "terminal", "productivity", "linux", "macos", "tools", "automation"]
 ---
 
-# [EN] Modern CLI Tools to Replace Your Defaults in 2026
+# Modern CLI Tools to Replace Your Defaults in 2026
 
 Unix tools are old. `ls` was written in 1971. `grep` in 1973. `find` in 1974. They work, but they were designed for a world without colors, without Git, without multi-core processors, and without developers who expect good UX.
 

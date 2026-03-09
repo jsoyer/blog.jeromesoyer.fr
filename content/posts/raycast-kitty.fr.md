@@ -8,7 +8,7 @@ author: "Jerome Soyer"
 description: "Comment j'ai transformé la gestion de mon terminal en une machine à productivité ronronnante grâce à Raycast et Kitty."
 ---
 
-# [FR] Domptez le Félin : Pilotez Kitty Terminal au doigt et à l'œil avec Raycast
+# Domptez le Félin : Pilotez Kitty Terminal au doigt et à l'œil avec Raycast
 
 Soyons honnêtes deux minutes : on passe 90% de notre vie dans le terminal, et les 10% restants à chercher dans laquelle de nos 57 tabs se cache le `tail -f` qu'on a lancé il y a trois heures.
 

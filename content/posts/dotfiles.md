@@ -8,7 +8,7 @@ categories: ["DevOps", "Linux", "macOS"]
 tags: ["chezmoi", "dotfiles", "automation", "fedora", "macos", "linux"]
 ---
 
-# [EN] Dotfiles Revolution: How I Manage My Entire dev Environment with Chezmoi
+# Dotfiles Revolution: How I Manage My Entire dev Environment with Chezmoi
 
 If you're a developer, you've probably experienced it: setting up a new machine is painful. Your aliases, configurations, keybindings, favorite tools — everything you spent years perfecting lives scattered across `.bashrc`, `.zshrc`, `.vimrc`, and dozens of other config files. And when you get a new work laptop or reinstall your OS? Start from scratch.
 

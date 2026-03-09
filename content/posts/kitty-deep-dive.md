@@ -8,7 +8,7 @@ categories: ["Tooling", "Terminal"]
 tags: ["kitty", "terminal", "productivity", "gpu", "cli", "automation"]
 ---
 
-# [EN] Kitty Terminal: A Deep Dive Into the GPU-Accelerated Beast
+# Kitty Terminal: A Deep Dive Into the GPU-Accelerated Beast
 
 Most developers pick a terminal emulator the way they pick a font: once, slightly randomly, and then never change. I was the same — until I tried **[Kitty](https://sw.kovidgoyal.net/kitty/)** and realized I'd been leaving performance and capability on the table for years.
 

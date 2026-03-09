@@ -8,7 +8,7 @@ categories: ["Tooling", "Terminal"]
 tags: ["kitty", "terminal", "productivity", "gpu", "cli", "automation"]
 ---
 
-# [FR] Kitty Terminal : Plongée dans la bête GPU-accélérée
+# Kitty Terminal : Plongée dans la bête GPU-accélérée
 
 La plupart des développeurs choisissent leur terminal comme ils choisissent une police : une fois, un peu au hasard, et ils ne changent plus jamais. J'étais pareil — jusqu'à ce que j'essaie **[Kitty](https://sw.kovidgoyal.net/kitty/)** et réalise que je laissais des performances et des fonctionnalités sur la table depuis des années.
 

@@ -8,7 +8,7 @@ categories: ["Tooling", "Terminal"]
 tags: ["nushell", "shell", "terminal", "productivity", "cli", "zsh"]
 ---
 
-# [FR] Pourquoi j'ai switché sur Nushell (et pourquoi vous devriez peut-être aussi)
+# Pourquoi j'ai switché sur Nushell (et pourquoi vous devriez peut-être aussi)
 
 Il y a un moment dans la vie de tout développeur où on regarde une ligne bash comme ça :
 

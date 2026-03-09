@@ -8,7 +8,7 @@ categories: ["DevOps", "Linux", "macOS"]
 tags: ["chezmoi", "dotfiles", "automation", "fedora", "macos", "linux"]
 ---
 
-# [FR] Dotfiles Revolution : Comment je gère tout mon environnement de dev avec Chezmoi
+# Dotfiles Revolution : Comment je gère tout mon environnement de dev avec Chezmoi
 
 ### Le Problème : Chaque Machine est Unique
 

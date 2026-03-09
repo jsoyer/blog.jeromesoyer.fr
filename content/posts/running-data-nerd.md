@@ -1,6 +1,6 @@
 ---
 title: "How a Data Nerd Approaches Running (Spoiler: Too Many Spreadsheets)"
-date: 2026-03-09T10:00:00+01:00
+date: 2025-11-04T07:30:00+01:00
 draft: false
 author: "Jerome Soyer"
 description: "I got into running the same way I get into everything — by over-researching it and building tools to track every metric."

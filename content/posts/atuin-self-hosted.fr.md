@@ -1,6 +1,6 @@
 ---
 title: "Atuin en self-hosted : historique shell chiffré et synchronisé sur toutes vos machines"
-date: 2026-03-09T19:00:00+01:00
+date: 2025-11-19T11:00:00+01:00
 draft: false
 author: "Jerome Soyer"
 description: "Lancez votre propre serveur d'historique shell chiffré sur Raspberry Pi pour une synchronisation transparente"

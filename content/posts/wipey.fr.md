@@ -1,6 +1,6 @@
 ---
 title: "Wipey : J'ai construit une app macOS parce que je m'envoyais des emails en nettoyant mon clavier"
-date: 2026-03-09T21:00:00+01:00
+date: 2026-01-22T15:00:00+01:00
 draft: false
 author: "Jerome Soyer"
 description: "Une app macOS qui verrouille le clavier et le trackpad pendant le nettoyage. Construite en Swift, distribuée via Homebrew."

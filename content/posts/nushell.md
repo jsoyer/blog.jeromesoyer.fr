@@ -1,6 +1,6 @@
 ---
 title: "Nushell: Why I Switched from Zsh (And Why You Might Too)"
-date: 2026-03-09T10:00:00+01:00
+date: 2025-07-23T10:30:00+02:00
 draft: false
 author: "Jerome Soyer"
 description: "After years of zsh, I switched my primary shell to Nushell. Here's what changed, what broke, and why I'm not going back."

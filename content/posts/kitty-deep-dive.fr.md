@@ -1,6 +1,6 @@
 ---
 title: "Kitty Terminal : Plongée dans la bête GPU-accélérée"
-date: 2026-03-09T11:00:00+01:00
+date: 2025-08-20T11:45:00+02:00
 draft: false
 author: "Jerome Soyer"
 description: "Au-delà des onglets — les kittens, les layouts, le scripting, et pourquoi c'est mon terminal principal depuis des années."

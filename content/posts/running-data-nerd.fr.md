@@ -1,6 +1,6 @@
 ---
 title: "Comment un data nerd aborde le running (indice : trop de tableurs)"
-date: 2026-03-09T10:00:00+01:00
+date: 2025-11-04T07:30:00+01:00
 draft: false
 author: "Jerome Soyer"
 description: "Je suis entré dans le running comme dans tout — en sur-recherchant et en construisant des outils pour tracker chaque métrique."

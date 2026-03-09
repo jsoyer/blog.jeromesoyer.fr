@@ -1,6 +1,6 @@
 ---
 title: "RTK : Un proxy CLI Rust qui réduit la consommation de tokens LLM de 60-90%"
-date: 2026-03-09T15:00:00+01:00
+date: 2025-10-15T08:45:00+02:00
 draft: false
 author: "Jerome Soyer"
 description: "Comment j'ai construit un proxy CLI en Rust qui réduit la consommation de tokens LLM de 60-90% sur les opérations dev courantes — et pourquoi c'est plus important qu'on ne le pense."

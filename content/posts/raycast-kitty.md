@@ -1,6 +1,6 @@
 ---
 title: "Unleash the Cat: Controlling Kitty Terminal with Raycast"
-date: 2026-02-14T10:00:00+01:00
+date: 2025-10-02T10:00:00+02:00
 draft: false
 tags: ["Raycast", "Kitty", "Terminal", "Productivity", "Automation", "Nushell", "AI"]
 categories: ["Tooling"]

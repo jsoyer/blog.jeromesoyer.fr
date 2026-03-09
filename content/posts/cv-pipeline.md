@@ -1,6 +1,6 @@
 ---
 title: "I Built an AI-Powered Job Application Pipeline and Applied to Anthropic With It"
-date: 2026-03-09T16:00:00+01:00
+date: 2026-02-19T11:00:00+01:00
 draft: false
 author: "Jerome Soyer"
 description: "How I over-engineered my job search with a YAML-driven AI pipeline, 67 scripts, and 14 CI/CD workflows. And why I don't regret a second of it."

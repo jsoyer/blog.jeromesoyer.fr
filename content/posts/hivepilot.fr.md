@@ -1,6 +1,6 @@
 ---
 title: "HivePilot : Construire un système d'orchestration multi-agents de A à Z"
-date: 2026-03-09T17:00:00+01:00
+date: 2026-02-05T09:30:00+01:00
 draft: false
 author: "Jerome Soyer"
 description: "Comment j'ai construit un système d'orchestration multi-agents en 2024 quand les outils n'existaient pas. Ce qui a marché, ce qui a explosé, et pourquoi les swarms d'agents sont plus difficiles qu'on ne le pense."

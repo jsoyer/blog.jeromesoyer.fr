@@ -1,6 +1,6 @@
 ---
 title: "Les outils CLI modernes pour remplacer vos classiques en 2026"
-date: 2026-03-09T12:00:00+01:00
+date: 2025-08-06T14:00:00+02:00
 draft: false
 author: "Jerome Soyer"
 description: "La liste définitive des remplaçants CLI modernes — plus rapides, plus ergonomiques, et plus intelligents que les outils avec lesquels vous avez grandi."

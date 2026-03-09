@@ -1,6 +1,6 @@
 ---
 title: "HivePilot: Building a Multi-Agent AI Orchestration System From Scratch"
-date: 2026-03-09T17:00:00+01:00
+date: 2026-02-05T09:30:00+01:00
 draft: false
 author: "Jerome Soyer"
 description: "How I built a multi-agent orchestration system in 2024 when the tools barely existed. What worked, what exploded, and why agent swarms are harder than you think."

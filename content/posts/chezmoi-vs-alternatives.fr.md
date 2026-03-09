@@ -1,6 +1,6 @@
 ---
 title: "chezmoi vs yadm vs stow : lequel choisir en 2026 ?"
-date: 2026-03-09T13:00:00+01:00
+date: 2025-09-03T09:00:00+02:00
 draft: false
 author: "Jerome Soyer"
 description: "Une comparaison pratique des trois gestionnaires de dotfiles les plus populaires — avec de vrais compromis, pas juste des tableaux de fonctionnalités."

@@ -1,6 +1,6 @@
 ---
 title: "Modern CLI Tools to Replace Your Defaults in 2026"
-date: 2026-03-09T12:00:00+01:00
+date: 2025-08-06T14:00:00+02:00
 draft: false
 author: "Jerome Soyer"
 description: "The definitive list of modern CLI replacements that are faster, friendlier, and smarter than the tools you grew up with."

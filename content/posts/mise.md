@@ -1,6 +1,6 @@
 ---
 title: "mise: One Tool to Replace nvm, rbenv, pyenv, and Every Other Version Manager"
-date: 2026-03-09T20:00:00+01:00
+date: 2026-01-08T10:45:00+01:00
 draft: false
 author: "Jerome Soyer"
 description: "mise consolidates all language version managers into a single CLI tool with .mise.toml config."

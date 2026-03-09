@@ -1,6 +1,6 @@
 ---
 title: "Dotfiles Revolution: How I Manage My Entire dev Environment with Chezmoi"
-date: 2026-02-14T11:00:00+01:00
+date: 2025-07-08T09:15:00+02:00
 draft: false
 author: "Jerome Soyer"
 description: "A comprehensive guide to cross-platform dotfiles management"

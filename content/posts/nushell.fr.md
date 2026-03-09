@@ -1,6 +1,6 @@
 ---
 title: "Pourquoi j'ai switché sur Nushell (et pourquoi vous devriez peut-être aussi)"
-date: 2026-03-09T10:00:00+01:00
+date: 2025-07-23T10:30:00+02:00
 draft: false
 author: "Jerome Soyer"
 description: "Après des années de zsh, j'ai changé mon shell principal pour Nushell. Ce qui a changé, ce qui a cassé, et pourquoi je ne reviens pas en arrière."

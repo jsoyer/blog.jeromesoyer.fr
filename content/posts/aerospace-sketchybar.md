@@ -1,6 +1,6 @@
 ---
 title: "Aerospace + Sketchybar: My Keyboard-Driven macOS Setup"
-date: 2026-03-09T18:00:00+01:00
+date: 2025-12-03T14:30:00+01:00
 draft: false
 author: "Jerome Soyer"
 description: "Tiling window manager + scriptable menubar for keyboard-driven macOS productivity"

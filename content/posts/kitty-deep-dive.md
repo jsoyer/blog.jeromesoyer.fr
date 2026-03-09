@@ -1,6 +1,6 @@
 ---
 title: "Kitty Terminal: A Deep Dive Into the GPU-Accelerated Beast"
-date: 2026-03-09T11:00:00+01:00
+date: 2025-08-20T11:45:00+02:00
 draft: false
 author: "Jerome Soyer"
 description: "Beyond just opening tabs — Kitty's kittens, layouts, scripting, and why it's been my primary terminal for years."

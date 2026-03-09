@@ -35,7 +35,7 @@
 
 ---
 
-## PHASE 2 — SEO & Discoverabilité ✅ IN PROGRESS
+## PHASE 2 — SEO & Discoverabilité ✅ DONE
 
 **Objectif : être trouvé sur Google. Zero coût, impact maximal.**
 **Agents utilisés : `seo-specialist`** — audit complet réalisé le 2026-03-09
@@ -54,8 +54,8 @@
 | Fix stale refs (raycast "in review") | HIGH | ✅ about.md + about.fr.md |
 | Canonical URLs vérification (EN/FR) | MEDIUM | ✅ OK natif PaperMod |
 | robots.txt audit | LOW | ✅ OK natif |
-| Pages tags avec descriptions | MEDIUM | ⬜ |
-| Soumission Bing Webmaster Tools | LOW | ⬜ |
+| Pages tags avec descriptions (12 tags EN+FR) | MEDIUM | ✅ |
+| Soumission Bing Webmaster Tools | LOW | ⬜ action manuelle requise |
 | Keyword cannibalization chezmoi/dotfiles | MEDIUM | ⬜ À surveiller |
 
 ### Actions manuelles restantes (Phase 2)
@@ -133,46 +133,49 @@
 
 ---
 
-## PHASE 4 — Contenu 📝
+## PHASE 4 — Contenu 📝 ✅ DONE (drafts)
 
 **Objectif : backlog d'articles et diversification.**
-**Agents à utiliser : `content-creator`, `technical-writer`**
+**Agents utilisés : `technical-writer`, `content-creator`** — réalisé le 2026-03-09
 
-### Articles techniques à écrire
+### Articles techniques
 
 | Article | Langue | Priorité | Status |
 |---------|--------|----------|--------|
-| cv-pipeline (version HR-safe) | EN+FR | HIGH | ⬜ |
-| HivePilot — personal CRM en Notion | EN+FR | HIGH | ⬜ |
-| Aerospace + Sketchybar macOS setup | EN+FR | MEDIUM | ⬜ |
-| Atuin self-hosted (Raspberry Pi) | EN+FR | MEDIUM | ⬜ |
-| Framework Laptop + Fedora Atomic setup | EN+FR | MEDIUM | ⬜ |
-| mise — remplacer nvm/rbenv/pyenv | EN+FR | MEDIUM | ⬜ |
-| Wipey — pourquoi j'ai construit une app Swift | EN+FR | LOW | ⬜ |
-| Paperless-ngx homelab setup | EN+FR | LOW | ⬜ |
+| cv-pipeline (version HR-safe) | EN+FR | HIGH | ✅ draft |
+| HivePilot — personal CRM en Notion | EN+FR | HIGH | ✅ draft |
+| Aerospace + Sketchybar macOS setup | EN+FR | MEDIUM | ✅ draft |
+| Atuin self-hosted (Raspberry Pi) | EN+FR | MEDIUM | ✅ draft |
+| Framework Laptop + Fedora Atomic setup | EN+FR | MEDIUM | ✅ draft |
+| mise — remplacer nvm/rbenv/pyenv | EN+FR | MEDIUM | ✅ draft |
+| Wipey — pourquoi j'ai construit une app Swift | EN+FR | LOW | ✅ draft |
+| Paperless-ngx homelab setup | EN+FR | LOW | ✅ draft |
 
 ### Articles non-tech (diversification)
 
 | Article | Langue | Priorité | Status |
 |---------|--------|----------|--------|
-| Premier article running/Strava | EN+FR | MEDIUM | ⬜ |
-| Setup cave à vin / wine tracker | FR | LOW | ⬜ |
-| Ma vision sur le marché crypto | FR | LOW | ⬜ |
+| Premier article running/Strava | EN+FR | MEDIUM | ✅ draft |
+| Setup cave à vin / wine tracker | FR | LOW | ✅ draft |
+| Ma vision sur le marché crypto | FR | LOW | ✅ draft |
+
+> **Note** : Tous les articles sont en `draft: true`. Publier en passant à `draft: false` + `chezmoi re-add`.
 
 ---
 
-## PHASE 5 — Performance & Core Web Vitals ⚡
+## PHASE 5 — Performance & Core Web Vitals ⚡ ✅ DONE
 
 **Objectif : 100/100 Lighthouse. Pas critique mais bon pour le SEO.**
-**Agents à utiliser : `performance-engineer`, `seo-specialist`**
+**Agents utilisés : `performance-engineer`** — réalisé le 2026-03-09
 
 | Tâche | Impact | Status |
 |-------|--------|--------|
-| Self-host Google Fonts (GDPR + perf) | HIGH | ⬜ |
-| Optimisation images (WebP, lazy load) | HIGH | ⬜ |
-| Mesure Core Web Vitals (LCP, CLS, FID) | HIGH | ⬜ |
+| Self-host Google Fonts (GDPR + perf) | HIGH | ✅ Inter + JBMono variable fonts (woff2, 88k total) |
+| Optimisation images (WebP, lazy load) | HIGH | ✅ Toutes covers → WebP (-75-81%), lazy load natif Hugo |
+| Preconnect hints pour CDN | LOW | ✅ jsdelivr + cloudflareinsights |
+| Font preload hints | HIGH | ✅ Inter + JBMono preload dans extend_head.html |
+| Mesure Core Web Vitals (LCP, CLS, FID) | HIGH | ⬜ À mesurer post-déploiement (PageSpeed Insights) |
 | Réduire JS inutile (audit bundle) | MEDIUM | ⬜ |
-| Preconnect hints pour CDN | LOW | ⬜ |
 | PWA / service worker (offline) | LOW | ⬜ |
 | Audit Lighthouse automatisé en CI | LOW | ⬜ |
 

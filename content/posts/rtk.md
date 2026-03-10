@@ -1,9 +1,9 @@
 ---
 title: "RTK: A Rust CLI Proxy That Cuts LLM Token Usage by 60-90%"
 date: 2025-10-15T08:45:00+02:00
-draft: true
+draft: false
 author: "Jerome Soyer"
-description: "How I built a CLI proxy in Rust that cuts LLM token consumption by 60-90% on common dev operations — and why it matters more than you think."
+description: "RTK is a CLI proxy that cuts LLM token consumption by 60-90% on common dev operations. Here's how it works and why it belongs in every AI-assisted dev workflow."
 categories: ["Tooling", "AI"]
 tags: ["rust", "cli", "llm", "claude", "ai", "productivity", "tokens", "automation"]
 cover:
@@ -13,7 +13,7 @@ cover:
 
 If you use Claude Code, Cursor, or any AI-assisted dev tool daily, here's a number that should bother you: **a single `git status` on a large repo can consume 10,000+ tokens**. Not because the output is useful — but because the raw text gets shoved into context as-is.
 
-I built **[RTK](https://github.com/jsoyer/rtk)** (Rust Token Killer) to fix this. It's a CLI proxy that sits between your commands and your LLM, filtering and compressing output before it hits the context window. Single Rust binary, zero dependencies, 60-90% token savings on common dev operations.
+**[RTK](https://github.com/jsoyer/rtk)** (Rust Token Killer) fixes this. It's a CLI proxy that sits between your commands and your LLM, filtering and compressing output before it hits the context window. Single Rust binary, zero dependencies, 60-90% token savings on common dev operations.
 
 ### The Problem
 
@@ -75,7 +75,7 @@ rtk cat             # truncates large files with summary
 
 ### The Analytics
 
-The part I find most satisfying: RTK tracks everything.
+The part I find most satisfying about RTK: it tracks everything.
 
 ```bash
 rtk gain

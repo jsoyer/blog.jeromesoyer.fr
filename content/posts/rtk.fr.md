@@ -1,9 +1,9 @@
 ---
 title: "RTK : Un proxy CLI Rust qui réduit la consommation de tokens LLM de 60-90%"
 date: 2025-10-15T08:45:00+02:00
-draft: true
+draft: false
 author: "Jerome Soyer"
-description: "Comment j'ai construit un proxy CLI en Rust qui réduit la consommation de tokens LLM de 60-90% sur les opérations dev courantes — et pourquoi c'est plus important qu'on ne le pense."
+description: "RTK est un proxy CLI qui réduit la consommation de tokens LLM de 60-90% sur les opérations dev courantes. Comment ça marche et pourquoi ça appartient à tout workflow dev assisté par IA."
 categories: ["Tooling", "AI"]
 tags: ["rust", "cli", "llm", "claude", "ai", "productivity", "tokens", "automation"]
 cover:
@@ -13,7 +13,7 @@ cover:
 
 Si vous utilisez Claude Code, Cursor, ou n'importe quel outil de dev assisté par IA au quotidien, voici un chiffre qui devrait vous déranger : **un seul `git status` sur un grand dépôt peut consommer plus de 10 000 tokens**. Pas parce que l'output est utile — mais parce que le texte brut est envoyé tel quel dans le contexte.
 
-J'ai construit **[RTK](https://github.com/jsoyer/rtk)** (Rust Token Killer) pour régler ça. C'est un proxy CLI qui s'intercale entre vos commandes et votre LLM, filtrant et compressant l'output avant qu'il n'atteigne la fenêtre de contexte. Binaire Rust unique, zéro dépendance, 60-90% d'économies de tokens sur les opérations dev courantes.
+**[RTK](https://github.com/jsoyer/rtk)** (Rust Token Killer) règle ça. C'est un proxy CLI qui s'intercale entre vos commandes et votre LLM, filtrant et compressant l'output avant qu'il n'atteigne la fenêtre de contexte. Binaire Rust unique, zéro dépendance, 60-90% d'économies de tokens sur les opérations dev courantes.
 
 ### Le Problème
 
@@ -70,7 +70,7 @@ Les meilleurs outils sont ceux qui disparaissent. RTK tourne silencieusement en 
 
 ### Pour aller plus loin
 
-Les filtres RTK sont conçus autour des sorties des outils modernes. Si vous ne les avez pas encore, voir [Les outils CLI modernes en 2026](/fr/posts/modern-cli-tools/).
+Les filtres RTK sont conçus autour des sorties des outils modernes. Si vous ne les avez pas encore, voir [Les outils CLI modernes en 2025](/fr/posts/modern-cli-tools/).
 
 ---
 

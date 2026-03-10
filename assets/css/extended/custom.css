@@ -511,9 +511,9 @@ body:not(.dark) .toc details > summary {
   gap: 0.3rem;
   padding: 0.65rem 0.9rem;
   border-radius: 8px;
-  border: 1px solid var(--border);
+  border: none;
   background: none;
-  transition: background 0.15s ease, border-color 0.15s ease;
+  transition: background 0.15s ease;
   text-decoration: none;
 }
 

@@ -1,5 +1,5 @@
 ---
-title: "My Neovim Setup in 2026: LSP, Plugins, and a Workflow That Actually Works"
+title: "My Neovim Setup in 2025: LSP, Plugins, and a Workflow That Actually Works"
 date: 2025-09-17T16:30:00+02:00
 draft: false
 author: "Jerome Soyer"

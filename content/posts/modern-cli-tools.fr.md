@@ -1,5 +1,5 @@
 ---
-title: "Les outils CLI modernes pour remplacer vos classiques en 2026"
+title: "Les outils CLI modernes pour remplacer vos classiques en 2025"
 date: 2025-08-06T14:00:00+02:00
 draft: false
 author: "Jerome Soyer"

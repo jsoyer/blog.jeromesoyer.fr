@@ -1,5 +1,5 @@
 ---
-title: "Modern CLI Tools to Replace Your Defaults in 2026"
+title: "Modern CLI Tools to Replace Your Defaults in 2025"
 date: 2025-08-06T14:00:00+02:00
 draft: false
 author: "Jerome Soyer"

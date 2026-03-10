@@ -150,7 +150,7 @@ I built a Raycast extension specifically to drive Kitty: search tabs, create win
 
 ### Next Steps
 
-- **Set up your editor:** [My Neovim Setup in 2026](/posts/neovim-setup/) — configure Neovim to work seamlessly inside Kitty.
+- **Set up your editor:** [My Neovim Setup in 2025](/posts/neovim-setup/) — configure Neovim to work seamlessly inside Kitty.
 - **Automate with Raycast:** [Raycast Kitty Extension](/posts/raycast-kitty/) — search tabs, launch workspace configs, all from Raycast.
 
 ---

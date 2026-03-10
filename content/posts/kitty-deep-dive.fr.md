@@ -57,7 +57,7 @@ Si vous passez votre vie dans le terminal, Kitty vaut le passage. La courbe d'ap
 
 ### Prochaines étapes
 
-- **Configurer l'éditeur :** [Mon setup Neovim en 2026](/fr/posts/neovim-setup/) — configurer Neovim pour fonctionner dans Kitty.
+- **Configurer l'éditeur :** [Mon setup Neovim en 2025](/fr/posts/neovim-setup/) — configurer Neovim pour fonctionner dans Kitty.
 - **Automatiser avec Raycast :** [Extension Raycast Kitty](/fr/posts/raycast-kitty/) — recherche d'onglets, lancement de configs, tout depuis Raycast.
 
 ---

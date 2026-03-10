@@ -1,5 +1,5 @@
 ---
-title: "chezmoi vs yadm vs stow: Which Dotfiles Manager Should You Use in 2026?"
+title: "chezmoi vs yadm vs stow: Which Dotfiles Manager Should You Use in 2025?"
 date: 2025-09-03T09:00:00+02:00
 draft: false
 author: "Jerome Soyer"

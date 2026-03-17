@@ -211,6 +211,14 @@ ARTICLES: list[tuple[str, str, str, list[str], str, str]] = [
         "#f9e2af",   # Yellow
         "0x",
     ),
+    (
+        "yapee",
+        "Yapee: PyLoad Browser Extension",
+        "Manifest V3. Privacy-first. Multi-server.",
+        ["Tooling", "Self-Hosted"],
+        "#89dceb",   # Sky
+        "dl",
+    ),
 ]
 
 

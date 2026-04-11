@@ -3,9 +3,9 @@ title: "AI-First Engineering: My 650+ Skills Dotfiles Evolution"
 date: 2026-04-11T09:00:00+01:00
 draft: false
 author: "Jerome Soyer"
-description: "How I transformed my dotfiles into an AI orchestration layer using aictx, Yapee, and over 600 custom skills."
+description: "How I transformed my dotfiles into an AI orchestration layer using aictx and over 600 custom skills."
 categories: ["DevOps", "AI", "Automation"]
-tags: ["aictx", "claudecode", "opencode", "codex", "dotfiles", "yapee", "automation"]
+tags: ["aictx", "claudecode", "opencode", "codex", "dotfiles", "automation"]
 cover:
   image: /images/covers/ai-first-engineering.webp
   alt: "AI-First Engineering"
@@ -25,11 +25,10 @@ My environment isn't just a shell; it's a factory. I've integrated three primary
 
 The core of this setup lies in the `dot_claude/` and `dot_agents/` directories, which now host **192 specialized agents** and over **650 shared skills**. Whether I'm on Fedora or Windows, my AI assistants have the same capabilities and the same memory.
 
-### The Secret Sauce: `aictx` & `Yapee`
-Synchronization is the hardest part of multi-tool AI workflows. This is where two new projects in my ecosystem come in:
+### The Secret Sauce: `aictx`
+Synchronization is the hardest part of multi-tool AI workflows. This is where **[`aictx`](https://github.com/jsoyer/dotfiles/releases/tag/aictx-v0.3.0) (v0.3.0)** comes in. 
 
-*   **[`aictx`](https://github.com/jsoyer/dotfiles/releases/tag/aictx-v0.3.0) (v0.3.0):** This utility acts as a **Context Source of Truth**. It manages the state and history between my different CLIs, ensuring that if Claude makes a decision, OpenCode and Codex are aware of it. No more repeated prompts.
-*   **`Yapee`:** My automation handler. It connects my AI agents to my infrastructure. `Yapee` is the one triggering my **Synapse Forge** deployments or updating my **Homebrew Tap** when an agent finishes a build.
+This utility acts as a **Context Source of Truth**. It manages the state and history between my different CLIs, ensuring that if Claude makes a decision, OpenCode and Codex are aware of it. No more repeated prompts.
 
 ### Optimization: RTK & Quality Gates
 To avoid "context bloat" and keep costs (and token usage) under control, I’ve implemented **RTK (Token Optimization Proxy)**. 

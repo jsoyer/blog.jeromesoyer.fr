@@ -25,11 +25,10 @@ Mon environnement n'est plus un simple shell, c'est une usine. J'ai intégré tr
 
 Le cœur de ce setup réside dans les répertoires `dot_claude/` et `dot_agents/`, qui hébergent désormais **192 agents spécialisés** et plus de **650 skills partagés**. Que je sois sous Fedora ou Windows, mes assistants IA ont les mêmes capacités et la même mémoire.
 
-### Le Secret : `aictx` & `Yapee`
-La synchronisation est la partie la plus difficile d'un workflow IA multi-outils. C'est là que deux nouveaux projets interviennent :
+### Le Secret : `aictx`
+La synchronisation est la partie la plus difficile d'un workflow IA multi-outils. C'est là qu'intervient **[`aictx`](https://github.com/jsoyer/dotfiles/releases/tag/aictx-v0.3.0) (v0.3.0)**.
 
-*   **[`aictx`](https://github.com/jsoyer/dotfiles/releases/tag/aictx-v0.3.0) (v0.3.0) :** Cet utilitaire agit comme une **Source de Vérité du Contexte**. Il gère l'état et l'historique entre mes différents CLIs, garantissant que si Claude prend une décision, OpenCode et Codex en soient informés. Fini les prompts répétés.
-*   **`Yapee` :** Mon gestionnaire d'automatisation. Il connecte mes agents IA à mon infrastructure. `Yapee` est celui qui déclenche les déploiements sur ma **Forge Synapse** ou met à jour mon **Tap Homebrew** quand un agent termine un build.
+Cet utilitaire agit comme une **Source de Vérité du Contexte**. Il gère l'état et l'historique entre mes différents CLIs, garantissant que si Claude prend une décision, OpenCode et Codex en soient informés. Fini les prompts répétés.
 
 ### Optimisation : RTK & Quality Gates
 Pour éviter l'explosion du contexte et garder les coûts (et l'usage des tokens) sous contrôle, j'ai implémenté **RTK (Token Optimization Proxy)**.
@@ -38,6 +37,10 @@ Via des hooks d'événements personnalisés dans mes dotfiles, j'ai mis en place
 
 ### Le Résultat : Flow State 2.0
 Avec ce setup, je n'utilise pas l'IA ; je **collabore** avec elle. En ayant mes skills et mes agents définis comme du code dans mes dotfiles, je peux configurer une nouvelle machine (comme mon récent cluster de Macs) et être pleinement productif avec mon workflow AI-First complet en moins de 5 minutes.
+
+---
+*Stay local. Stay secure. Live the Least Privilege Life.*
+ents définis comme du code dans mes dotfiles, je peux configurer une nouvelle machine (comme mon récent cluster de Macs) et être pleinement productif avec mon workflow AI-First complet en moins de 5 minutes.
 
 ---
 *Stay local. Stay secure. Live the Least Privilege Life.*

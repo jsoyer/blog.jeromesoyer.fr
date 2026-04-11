@@ -6,6 +6,9 @@ author: "Jerome Soyer"
 description: "Why I traded my aging Proxmox node for a cluster of high-spec Intel Macs to run Fedora and Windows."
 categories: ["Infrastructure", "Hardware", "Linux"]
 tags: ["macpro", "macmini", "fedora", "windows", "homelab", "intel"]
+cover:
+  image: /images/covers/intel-mac-homelab.webp
+  alt: "Intel Mac Homelab"
 ---
 
 ### The 32GB Wall

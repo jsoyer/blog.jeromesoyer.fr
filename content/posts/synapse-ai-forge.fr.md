@@ -6,6 +6,9 @@ author: "Jerome Soyer"
 description: "Une plongée dans le provisionnement automatisé d'un nœud IA haute performance avec RTX 5070 et Podman rootless."
 categories: ["AI", "DevOps", "Fedora"]
 tags: ["rtx5070", "podman", "ollama", "uv", "automation", "nvidia", "fedora"]
+cover:
+  image: /images/covers/synapse-ai-forge.webp
+  alt: "Synapse AI Forge"
 ---
 
 ### Au-delà du Chatbot

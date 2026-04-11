@@ -6,6 +6,9 @@ author: "Jerome Soyer"
 description: "Comment j'ai transformé mes dotfiles en une couche d'orchestration IA utilisant aictx, Yapee et plus de 600 skills personnalisés."
 categories: ["DevOps", "AI", "Automation"]
 tags: ["aictx", "claudecode", "opencode", "codex", "dotfiles", "yapee", "automation"]
+cover:
+  image: /images/covers/ai-first-engineering.webp
+  alt: "AI-First Engineering"
 ---
 
 ### Le Terminal est le nouvel IDE

@@ -6,6 +6,9 @@ author: "Jerome Soyer"
 description: "Pourquoi j'ai remplacé mon nœud Proxmox vieillissant par un cluster de Macs Intel haute performance pour faire tourner Fedora et Windows."
 categories: ["Infrastructure", "Hardware", "Linux"]
 tags: ["macpro", "macmini", "fedora", "windows", "homelab", "intel"]
+cover:
+  image: /images/covers/intel-mac-homelab.webp
+  alt: "Intel Mac Homelab"
 ---
 
 ### Le mur des 32Go

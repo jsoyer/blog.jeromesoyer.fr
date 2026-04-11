@@ -6,6 +6,9 @@ author: "Jerome Soyer"
 description: "How I transformed my dotfiles into an AI orchestration layer using aictx, Yapee, and over 600 custom skills."
 categories: ["DevOps", "AI", "Automation"]
 tags: ["aictx", "claudecode", "opencode", "codex", "dotfiles", "yapee", "automation"]
+cover:
+  image: /images/covers/ai-first-engineering.webp
+  alt: "AI-First Engineering"
 ---
 
 ### The Terminal is the New IDE

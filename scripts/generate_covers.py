@@ -219,6 +219,30 @@ ARTICLES: list[tuple[str, str, str, list[str], str, str]] = [
         "#89dceb",   # Sky
         "dl",
     ),
+    (
+        "intel-mac-homelab",
+        "Intel Mac Renaissance",
+        "128GB Combined RAM Homelab.",
+        ["Hardware", "macOS", "Linux"],
+        "#89b4fa",   # Blue
+        "i",
+    ),
+    (
+        "synapse-ai-forge",
+        "Synapse: Modular AI Forge",
+        "RTX 5070 & Modular Deployment.",
+        ["AI", "Fedora", "NVIDIA"],
+        "#fab387",   # Peach
+        "AI",
+    ),
+    (
+        "ai-first-engineering",
+        "AI-First Engineering",
+        "650+ Skills Dotfiles Evolution.",
+        ["AI", "DevOps", "Automation"],
+        "#cba6f7",   # Mauve
+        "$_",
+    ),
 ]
 
 

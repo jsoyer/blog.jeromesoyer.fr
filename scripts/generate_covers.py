@@ -243,6 +243,22 @@ ARTICLES: list[tuple[str, str, str, list[str], str, str]] = [
         "#cba6f7",   # Mauve
         "$_",
     ),
+    (
+        "securing-ai-agents",
+        "Securing Your AI Agents",
+        "Least privilege for the age of autonomy.",
+        ["Security", "AI", "Agents"],
+        "#f9e2af",   # Yellow
+        "[!]",
+    ),
+    (
+        "mcp-servers",
+        "MCP Servers, Hands-On",
+        "Plug your homelab into your agents.",
+        ["MCP", "AI", "Homelab"],
+        "#a6e3a1",   # Green
+        "<>",
+    ),
 ]
 
 

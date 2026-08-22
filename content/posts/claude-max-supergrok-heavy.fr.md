@@ -271,6 +271,3 @@ Les éditeurs le savent. Anthropic pousse Max — et une app mobile que je regre
 Ma prédiction : d'ici fin 2026, la question ne sera plus « Claude ou Grok ? » mais « quel modèle pour quelle surface ? » — terminal via Herdr, délégation via Grok Bot, pilotage via Moshi, réflexion via Grok Heavy — et des abonnements empilés (Heavy + Ultra + Pro) qui n'ont toujours pas fusionné.
 
 En attendant, je paie mes factures, j'orchestre mes agents avec HivePilot, et je vérifie mon iPhone — Moshi pour les approbations CLI, Grok Bot pour la veille du matin, l'app Claude pour les questions qu'aucun Bot ne mérite.
-
----
-*Stay local. Stay secure. Live the Least Privilege Life.*

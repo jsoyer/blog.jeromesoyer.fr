@@ -259,6 +259,14 @@ ARTICLES: list[tuple[str, str, str, list[str], str, str]] = [
         "#a6e3a1",   # Green
         "<>",
     ),
+    (
+        "claude-max-supergrok-heavy",
+        "Claude Max → SuperGrok Heavy",
+        "Six months at the top tier. Then I switched.",
+        ["AI", "Productivity"],
+        "#f38ba8",   # Red
+        ">>",
+    ),
 ]
 
 

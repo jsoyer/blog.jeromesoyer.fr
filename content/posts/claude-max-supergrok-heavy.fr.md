@@ -13,7 +13,7 @@ cover:
 
 ### Le contexte : je ne suis pas un utilisateur occasionnel
 
-Quand Anthropic a lancé **Claude Max** en avril 2025, j'ai souscrit au tier **20x à 200 $/mois** sans hésiter. Pas par snobisme — par nécessité. Mon workflow décrit dans [Engineering AI-First](/fr/posts/ai-first-engineering/) n'a jamais tourné autour d'un IDE graphique : c'est **la CLI, toujours la CLI**. **Claude Code** et **Grok Build** dans des panes **Herdr**, pilotés depuis le canapé via **Moshi** sur iPhone, synchronisés via `aictx` et optimisés par **[RTK](/fr/posts/rtk/)**.
+Quand Anthropic a lancé **Claude Max** en avril 2025, j'ai souscrit au tier **20x à 200 $/mois** sans hésiter. Pas par snobisme — par nécessité. Mon workflow décrit dans [Engineering AI-First](/fr/posts/ai-first-engineering/) n'a jamais tourné autour d'un IDE graphique : c'est **la CLI, toujours la CLI**. **Claude Code** et **Grok Build** dans des panes **Herdr**, pilotés depuis le canapé via **Moshi** sur iPhone, synchronisés via `aictx` et orchestrés par **[HivePilot](/fr/posts/hivepilot/)**.
 
 J'avais un petit abonnement **Cursor** — le plan de base, à peine utilisé. Pas par principe, par habitude : mon cerveau vit dans Kitty, mes agents vivent dans **Herdr**, et mon téléphone me sert de télécommande via **Moshi**. Je tape rarement du code à la main ; j'orchestrre du contexte.
 
@@ -67,9 +67,9 @@ Voici comment je répartis concrètement :
 | IDE graphique / édition inline | **Cursor** | Ultra, mais quasi jamais pour coder — réservé à Grok Bot |
 | Délégation autonome hors terminal | **Grok Bot** | Agents cloud 24/7, apps sans API, iOS natif |
 
-Mes **650+ skills**, hooks, plugins et serveurs **MCP** (Paperless, etc.) vivent dans mes dotfiles et fonctionnent dans Claude Code *et* Grok Build — peu importe le pane Herdr où je les lance. Herdr ne wrappe pas les agents ; il leur donne un **runtime persistant**. Moshi ne remplace pas le terminal ; il me donne une **fenêtre mobile** sur ce runtime.
+Mes **skills**, hooks, plugins et serveurs **MCP** (Paperless, etc.) vivent dans mes dotfiles et fonctionnent dans Claude Code *et* Grok Build — peu importe le pane Herdr où je les lance. Herdr ne wrappe pas les agents ; il leur donne un **runtime persistant**. Moshi ne remplace pas le terminal ; il me donne une **fenêtre mobile** sur ce runtime.
 
-Le soir, scénario typique : je lance trois agents dans Herdr sur mon Mac — un sur RTK, un sur mes dotfiles, un sur un article de blog. Je pars courir. Mon iPhone vibre via Moshi : l'agent RTK est `blocked`, il veut confirmer un `git push`. J'approuve depuis l'inbox Moshi sans rouvrir le laptop. C'est ça, mon workflow. Pas de diff inline dans un IDE — de l'orchestration terminal pure.
+Le soir, scénario typique : je lance trois agents dans Herdr sur mon Mac — un sur HivePilot, un sur mes dotfiles, un sur un article de blog. Je pars courir. Mon iPhone vibre via Moshi : l'agent HivePilot est `blocked`, il veut confirmer un `git push`. J'approuve depuis l'inbox Moshi sans rouvrir le laptop. C'est ça, mon workflow. Pas de diff inline dans un IDE — de l'orchestration terminal pure.
 
 Ce qui a changé avec le switch vers Grok Heavy :
 
@@ -123,11 +123,11 @@ Inclus dans l'abonnement SuperGrok (et donc Heavy). Et là, xAI a fait quelque c
 Concrètement, dans mon repo :
 
 - Mon `AGENTS.md` ? Reconnu.
-- Mes **650+ skills** dans `dot_claude/` et `dot_agents/` ? Reconnus.
+- Mes **skills** dans `dot_claude/` et `dot_agents/` ? Reconnus.
 - Mes hooks, plugins, serveurs **MCP** (Paperless, etc.) ? Reconnus.
 - Mes règles de permission et conventions de repo ? Reconnues.
 
-J'ai ouvert Grok Build dans mes dotfiles, et mon infrastructure agentique existante s'est branchée telle quelle. Pas de migration, pas de réécriture. Pour quelqu'un qui a investi des mois à câbler [650+ skills](/fr/posts/ai-first-engineering/), c'est le feature killer — pas Grok 4 Heavy en soi.
+J'ai ouvert Grok Build dans mes dotfiles, et mon infrastructure agentique existante s'est branchée telle quelle. Pas de migration, pas de réécriture. Pour quelqu'un qui a investi des mois à câbler des [skills](/fr/posts/ai-first-engineering/), c'est le feature killer — pas Grok 4 Heavy en soi.
 
 **Ce que Grok Build apporte en plus de Claude Code :**
 
@@ -144,19 +144,19 @@ J'ai ouvert Grok Build dans mes dotfiles, et mon infrastructure agentique exista
 En pratique, voici comment je répartis le terminal aujourd'hui :
 
 - **Claude Code** → repos de prod, permissions verrouillées, workflows [moindre privilège](/fr/posts/securing-ai-agents/) éprouvés
-- **Grok Build** → exploration, prototypage, tâches où je veux le raisonnement Grok *dans* le terminal — refactors expérimentaux sur RTK, scripts d'infra, investigations multi-fichiers
-- **RTK** → devant les deux, sans distinction
+- **Grok Build** → exploration, prototypage, tâches où je veux le raisonnement Grok *dans* le terminal — refactors expérimentaux sur HivePilot, scripts d'infra, investigations multi-fichiers
+- **HivePilot** → orchestration multi-agents au-dessus des deux, sans distinction
 
 Le **Plan Mode** de Grok Build m'a particulièrement séduit sur les refactors risqués. Je lance `grok` en mode plan, je relis chaque étape, je commente ou réécris le plan avant qu'une seule ligne ne bouge. C'est le même réflexe de moindre privilège que mes Quality Gates — mais natif dans l'outil.
 
-Les **subagents parallèles** changent aussi la donne sur les gros chantiers. Sur un refactor RTK qui touche parser, hooks et benchmarks, Grok Build délègue à des agents enfants en worktrees séparés. Herdr affiche l'état de chaque pane dans la sidebar — `working`, `blocked`, `done` — sans que j'aie à scroller dans trois terminaux.
+Les **subagents parallèles** changent aussi la donne sur les gros chantiers. Sur un refactor HivePilot qui touche orchestrateur, workers et benchmarks, Grok Build délègue à des agents enfants en worktrees séparés. Herdr affiche l'état de chaque pane dans la sidebar — `working`, `blocked`, `done` — sans que j'aie à scroller dans trois terminaux.
 
 Et le **Agent Dashboard** de Grok Build (juin 2026) ressemble à ce que Herdr fait déjà nativement : plusieurs sessions en parallèle, visibilité sur ce que chaque agent fait, réponse aux agents qui attendent une validation. Mon multiplexeur est devenu une salle de contrôle — sauf que c'est Herdr qui orchestre, pas un IDE.
 
 **Les limites, honnêtement :**
 
 - **256K tokens de contexte** — bien en deçà des 1M d'Opus. Sur un monorepo massif, ça se sent.
-- **Beta encore instable** — j'ai eu des sessions qui ont dérivé sur des commandes shell non demandées. Mes garde-fous RTK et permissions restent non négociables.
+- **Beta encore instable** — j'ai eu des sessions qui ont dérivé sur des commandes shell non demandées. Mes garde-fous HivePilot et permissions restent non négociables.
 - **Pas d'équivalent Moshi** — Grok n'a pas de `moshi-hook`. Je peux piloter Grok Build depuis Moshi (c'est un vrai terminal), mais pas les notifications agent-aware, l'inbox unifiée, ni les approbations depuis le lock screen pour Grok comme pour Claude Code.
 
 Mais le fait que xAI ait rendu Grok Build **compatible Claude Code par design** dit quelque chose sur le marché : la guerre ne se joue plus sur le format des skills, mais sur la qualité du modèle derrière. Et pour moi, avoir le choix entre Opus et Grok 4.6 *dans le même terminal setup* vaut une partie des 300 $/mois à eux seuls.
@@ -232,11 +232,11 @@ Le switch a d'autres coûts au-delà des 100 $ supplémentaires et de l'app mobi
 
 **Les Artifacts.** Je les utilise moins qu'avant, mais quand j'en ai besoin — diagrammes, documents interactifs — Claude via claude.ai ou l'app mobile est imbattable. Grok n'a pas d'équivalent direct.
 
-### RTK reste pertinent (peut-être plus qu'avant)
+### HivePilot reste pertinent (peut-être plus qu'avant)
 
-Ironie du sort : j'ai construit **[RTK](https://github.com/jsoyer/rtk)** pour économiser des tokens sur Claude Code et Grok Build dans Herdr, et je l'utilise toujours. Un `git status` non proxifié brûle des tokens quel que soit le fournisseur, et un agent qui lance des commandes shell en boucle dans un pane Herdr est un gouffre à tokens si vous ne filtrez pas l'output.
+Ironie du sort : j'ai construit **[HivePilot](https://github.com/jsoyer/HivePilot)** pour orchestrer des swarms d'agents quand un seul modèle ne suffisait plus — et je l'utilise toujours. Claude Code dans un pane Herdr, Grok Build dans un autre, Grok Bot dans le cloud : **HivePilot** reste la couche qui décide *qui* fait *quoi*, pas le multiplexeur qui affiche l'état.
 
-Avec SuperGrok Heavy + un tier Claude résiduel pour l'app mobile, optimiser chaque token compte double. Mes hooks RTK dans les dotfiles ne discriminent pas : `rtk git status` avant que l'output n'atteigne Claude Code, Grok Build, ou n'importe quel modèle.
+Avec SuperGrok Heavy + Cursor Ultra + un tier Claude résiduel, le risque n'est plus de manquer de tokens — c'est de lancer trop d'agents sans coordination. HivePilot ne discrimine pas le fournisseur : un worker Claude ou un worker Grok, c'est le même contrat.
 
 ### Le verdict après deux mois
 
@@ -257,20 +257,20 @@ Orchestration agents / sessions          →  Herdr (multiplexeur persistant)
 Pilotage mobile terminal / approbations  →  Moshi + moshi-hook
 Conversation rapide hors terminal        →  App Claude (tier Pro — à garder ?)
 Édition rapide sans agent                 →  Neovim
-Optimisation tokens (tous)               →  RTK
+Orchestration multi-agents               →  HivePilot
 ```
 
 Le coût total dépasse largement les 300 $/mois — Heavy, Ultra, Claude Pro résiduel. C'est le prix d'un workflow CLI qui a fini par adopter Cursor — mais pour les Bots, pas pour l'éditeur.
 
 ### Ce que ça dit sur le marché en 2026
 
-Le parallèle avec l'histoire des IDE est frappant — sauf que pour moi, l'IDE c'est le terminal. On n'a plus « un outil IA » — on a un **stack IA** : **Herdr** pour l'orchestration terminal, **Moshi** pour le pilotage mobile CLI, **Grok Build** et **Claude Code** pour l'exécution, **Grok Bot** pour la délégation cloud, **Grok Heavy** pour la réflexion, **Cursor Ultra** pour débloquer les Bots, **RTK** pour l'efficacité, `aictx` pour la cohérence.
+Le parallèle avec l'histoire des IDE est frappant — sauf que pour moi, l'IDE c'est le terminal. On n'a plus « un outil IA » — on a un **stack IA** : **Herdr** pour l'orchestration terminal, **Moshi** pour le pilotage mobile CLI, **Grok Build** et **Claude Code** pour l'exécution, **Grok Bot** pour la délégation cloud, **Grok Heavy** pour la réflexion, **Cursor Ultra** pour débloquer les Bots, **HivePilot** pour l'orchestration multi-agents, `aictx` pour la cohérence.
 
 Les éditeurs le savent. Anthropic pousse Max — et une app mobile que je regrette encore pour le chat. xAI pousse Heavy, Grok Build, et Grok Bot. Cursor n'est plus juste un IDE : c'est l'infrastructure d'identité derrière les Bots. Herdr et Moshi comblent le fossé terminal que ni Cursor ni les apps natives ne couvrent seuls.
 
 Ma prédiction : d'ici fin 2026, la question ne sera plus « Claude ou Grok ? » mais « quel modèle pour quelle surface ? » — terminal via Herdr, délégation via Grok Bot, pilotage via Moshi, réflexion via Grok Heavy — et des abonnements empilés (Heavy + Ultra + Pro) qui n'ont toujours pas fusionné.
 
-En attendant, je paie mes factures, j'optimise mes tokens avec RTK, et je vérifie mon iPhone — Moshi pour les approbations CLI, Grok Bot pour la veille du matin, l'app Claude pour les questions qu'aucun Bot ne mérite.
+En attendant, je paie mes factures, j'orchestre mes agents avec HivePilot, et je vérifie mon iPhone — Moshi pour les approbations CLI, Grok Bot pour la veille du matin, l'app Claude pour les questions qu'aucun Bot ne mérite.
 
 ---
 *Stay local. Stay secure. Live the Least Privilege Life.*

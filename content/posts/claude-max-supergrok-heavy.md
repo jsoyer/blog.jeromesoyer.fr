@@ -3,9 +3,9 @@ title: "From Claude Max to SuperGrok Heavy: Six Months at the Top, Then the Big 
 date: 2026-08-22T09:00:00+02:00
 draft: false
 author: "Jerome Soyer"
-description: "After months on Claude Max 20x, I switched to SuperGrok Heavy at $300/month. Herdr, Moshi, Grok Build CLI — and the Claude mobile app I'll already miss."
+description: "After months on Claude Max 20x, I switched to SuperGrok Heavy at $300/month. Herdr, Moshi, Grok Build, Grok Bot, Cursor Ultra — and the Claude mobile app I'll already miss."
 categories: ["AI", "Productivity"]
-tags: ["claude", "grok", "supergrok", "grok-build", "herdr", "moshi", "ai", "productivity", "claudecode", "tokens", "agents"]
+tags: ["claude", "grok", "supergrok", "grok-build", "grok-bot", "cursor", "herdr", "moshi", "ai", "productivity", "claudecode", "tokens", "agents"]
 cover:
   image: /images/covers/claude-max-supergrok-heavy.webp
   alt: "Claude Max to SuperGrok Heavy"
@@ -15,9 +15,11 @@ cover:
 
 When Anthropic launched **Claude Max** in April 2025, I signed up for the **20x tier at $200/month** without hesitation. Not out of snobbery — out of necessity. My workflow described in [AI-First Engineering](/posts/ai-first-engineering/) never revolved around a graphical IDE: it's **the CLI, always the CLI**. **Claude Code** and **Grok Build** in **Herdr** panes, steered from the couch via **Moshi** on iPhone, synchronized via `aictx` and optimized by **[RTK](/posts/rtk/)**.
 
-I have a Cursor subscription on a small plan. I barely use it. Not out of principle — out of habit. My brain lives in Kitty, my agents live in Herdr, and my phone is a remote control via Moshi. I rarely type code by hand; I orchestrate context. The $20/month Pro tier? A distant memory. Max 5x? Not enough after two days.
+I had a small **Cursor** subscription — the basic plan, barely used. Not out of principle, out of habit: my brain lives in Kitty, my agents live in **Herdr**, and my phone is a remote control via **Moshi**. I rarely type code by hand; I orchestrate context.
 
-For six months, Claude Max powered **Claude Code, the Claude mobile app, and my Herdr sessions**. Then, in July 2026, I did something I hadn't planned: **I cancelled Max and subscribed to SuperGrok Heavy** — and discovered **Grok Build**, xAI's terminal agent that slots into the same Herdr setup without breaking anything.
+With **SuperGrok Heavy**, everything shifted: I now have **Cursor Ultra**, and for the first time, Cursor actually does something — but not as an IDE.
+
+For six months, Claude Max powered **Claude Code, the Claude mobile app, and my Herdr sessions**. Then, in July 2026, I cancelled Max and subscribed to SuperGrok Heavy — and discovered **Grok Build** in my terminal, then **Grok Bot** on my iPhone.
 
 Here's why, what changed in my terminal, and what I already regret.
 
@@ -60,7 +62,8 @@ Here's how I actually split tasks:
 | Sensitive repos, locked permissions | **Claude Code** | Proven [least-privilege](/posts/securing-ai-agents/) workflows |
 | Exploration, Grok reasoning | **Grok Build** | Same skills, different model, same Herdr pane |
 | Quick edits without an agent | **Neovim** | Still my editor for micro-changes |
-| Graphical agentic IDE | **Cursor** | Subscribed, almost never opened |
+| Graphical IDE / inline editing | **Cursor** | Ultra, but almost never for coding — reserved for Grok Bot |
+| Autonomous delegation off-terminal | **Grok Bot** | 24/7 cloud agents, apps without APIs, native iOS |
 
 My **650+ skills**, hooks, plugins, and **MCP** servers (Paperless, etc.) live in my dotfiles and work in Claude Code *and* Grok Build — regardless of which Herdr pane I launch them in. Herdr doesn't wrap agents; it gives them a **persistent runtime**. Moshi doesn't replace the terminal; it gives me a **mobile window** onto that runtime.
 
@@ -70,12 +73,14 @@ What changed with the switch to Grok Heavy:
 
 - **Grok Heavy (web/app)** → thinking, DeepSearch, real-time analysis
 - **Grok Build** → new Herdr pane, same skills, Grok model
+- **Grok Bot** → autonomous teammates on iPhone, dedicated cloud computer
+- **Cursor Ultra** → unlocked via Heavy, used for Grok Bot — not the IDE
 - **Claude Code** → still there for prod and permissions
-- **Moshi** → unchanged, but the inbox only half-speaks Claude now
+- **Moshi** → unchanged for terminal; Grok Bot picks up off-CLI work
 
-**Three interfaces, two ecosystems, one Herdr multiplexer.**
+**Four interfaces, two ecosystems, one Herdr multiplexer — and finally a Cursor subscription that does something.**
 
-*(Irony: this article was drafted by a Cursor Cloud Agent — a tool I don't use daily. Proof that the agent market plays out beyond the terminal too, even for CLI purists.)*
+*(Irony: this article was drafted by a Cursor Cloud Agent — via the Ultra I wasn't using before Heavy. Full circle.)*
 
 ### SuperGrok Heavy: what $300/month actually buys
 
@@ -93,7 +98,8 @@ What I got in return:
 | **Dev ecosystem** | Claude Code, Cowork, mature MCP | Grok Build, xAI API |
 | **Mobile** | **Claude app** (Max) + Moshi | Grok app (less mature) |
 | **Agent multiplexer** | Herdr | Herdr (unchanged) |
-| **Terminal agent** | Claude Code | **Grok Build** (included with SuperGrok) |
+| **Cloud autonomous agents** | — | **Grok Bot** (included with Heavy + Ultra) |
+| **Cursor** | Small plan, unused | **Ultra** (via Heavy, for Grok Bot) |
 | **Usage limits** | 5h session + weekly quota | Weekly pool (more generous) |
 
 The differentiator is **Grok 4 Heavy**: a multi-agent model that runs several reasoning chains in parallel and synthesizes the result. On paper, it sounds like marketing. In practice, on an architecture problem or a comparative analysis of four technical approaches, the difference is noticeable — not always "better," but **different**. Grok explores angles Claude sometimes dismisses too quickly.
@@ -153,24 +159,66 @@ And Grok Build's **Agent Dashboard** (June 2026) looks like what Herdr already d
 
 But the fact that xAI made Grok Build **Claude Code-compatible by design** says something about the market: the war is no longer about skill format, but about model quality behind it. And for me, having the choice between Opus and Grok 4.6 *in the same terminal setup* is worth part of the $300/month on its own.
 
+### Grok Bot: the teammate who never sleeps
+
+If Grok Build colonized my terminal, **Grok Bot** colonized my pocket — and it might be the biggest surprise of the switch.
+
+Launched in beta on August 11, 2026, **Grok Bot** isn't a chatbot. It's a team of **named, persistent agents**, each with a job, memory, and — key point — **its own cloud Linux computer**. Not an API call chain. Not an MCP server to wire up. A real browser, real filesystem, real terminal, running 24/7 even when my MacBook is closed.
+
+Included with **SuperGrok Heavy** and **Cursor Ultra**. Sign-in via Cursor account — hence the sudden value of my Ultra subscription, even without opening the IDE.
+
+**How it works in practice:**
+
+1. I create a Bot, give it a name and role ("crypto watch", "Paperless email triage", "blog prep").
+2. I send it a task like a colleague — from the iOS app or desktop.
+3. The Bot connects to my tools (Gmail, Notion, web interfaces without APIs) and runs the workflow end to end.
+4. It comes back when it needs approval. Otherwise, it delivers.
+
+**What sets it apart from Grok Build and Moshi:**
+
+| | Grok Build | Moshi + Herdr | Grok Bot |
+|---|---|---|---|
+| **Where it runs** | My Mac / homelab | My Mac / homelab | xAI cloud (dedicated computer) |
+| **Interface** | Terminal (Herdr pane) | Mobile terminal SSH/Mosh | iOS / desktop app, messaging |
+| **Autonomy** | Session tied to host | Session tied to host | 24/7, laptop closed |
+| **Apps without API** | Via MCP only | Via MCP only | Native browser, direct login |
+| **Parallelism** | Subagents / Herdr panes | Herdr panes | Multiple independent Bots |
+| **My usage** | Code, refactors, infra | Approvals, CLI steering | Watch, ops, off-terminal tasks |
+
+The use case that sold me: **article research**. Before, I'd open the Claude mobile app on the train to brainstorm. Now I assign a Grok Bot daily crypto + tech watch. It scrapes, synthesizes, leaves a note ready in the morning. I validate from iPhone. My laptop never moved.
+
+Another case: **ops without MCP**. Paperless has an MCP server — perfect for Claude Code in Herdr. But many tools don't. Grok Bot connects to the web UI like a human. Not architecturally elegant ([least privilege](/posts/securing-ai-agents/)? debatable), but brutally effective for one-off tasks.
+
+The **chief of staff model** works well: one coordinator Bot, specialized Bots underneath — watch, writing, homelab monitoring. They collaborate in a thread, pass work between them, and I'm no longer the bottleneck.
+
+**The limits, honestly:**
+
+- **Beta, and it shows** — workflows drift, logins expire, tasks get stuck without clear notification.
+- **Cursor account required** — xAI and Cursor are now linked. One more subscription to track, even if Ultra comes with Heavy.
+- **No Linux desktop** — macOS, Windows, and iOS apps only. My Fedora homelab stays out of scope for now.
+- **Privacy Mode** — legacy accounts must migrate to cloud storage. Worth evaluating against my [least-privilege](/posts/securing-ai-agents/) reflex.
+
+But Grok Bot fills a gap neither Moshi nor Grok Build covered: **delegating real work off-terminal, without a host running, from iPhone**. It's the closest layer to what the Claude mobile app gave me — except the work comes back *finished*, not as conversation.
+
 ### What I actually miss: the Claude mobile app
 
-The switch to Grok Heavy didn't make me regret Cursor — I wasn't using it anyway. What I *already* miss is **the Claude mobile app**.
+The switch to Grok Heavy didn't make me regret the Cursor IDE — I wasn't using it for that anyway. What I *still* miss is **the Claude mobile app** for pure conversation — brainstorming, summarizing, dictating an idea without delegating a task.
 
 With Claude Max, the iOS app was my pocket interface for everything that wasn't code: brainstorming an article, summarizing a PDF, asking a quick question on the go, dictating an idea between meetings. Clean, fast, synced with my Max account. No SSH, no Herdr, no Moshi — just Claude in my pocket.
 
 The Grok app exists. It's improving. But today, it doesn't offer the same fluidity for everyday intellectual work outside the terminal. When I'm on the train and want to sharpen an article angle, I open Grok and... it gets the job done, without the same *presence*. Subjective, but it's the first concrete regret of the switch.
 
-**Moshi fills part of the gap — but not all.** Moshi reconnects me to my Herdr agents from iPhone: approvals, inbox, long sessions. Great for *steering* code remotely. Not the same as a Claude conversation on the couch with no terminal underneath. Two different use cases:
+**Grok Bot fills part of the gap — but not all.** For concrete task delegation (watch, triage, prep), Grok Bot on iOS beats anything I had. For fluid conversation without a deliverable, the Claude app still leads. Moshi remains irreplaceable for steering Herdr.
 
-| Need | Claude app (before) | Moshi + Herdr (now) | Grok app (now) |
-|---|---|---|---|
-| Quick question, writing | ✅ Native, fluid | ❌ Overkill | ⚠️ Fine, less polished |
-| Steer a running agent | ❌ | ✅ Inbox, push, approvals | ❌ No equivalent hook |
-| Long autonomous session | ⚠️ Limited on mobile | ✅ Agent runs on host | ⚠️ Web/app only |
-| Off-network / no laptop | ✅ | ⚠️ Needs host running | ✅ |
+| Need | Claude app (before) | Moshi + Herdr | Grok Bot (now) | Grok app (now) |
+|---|---|---|---|---|
+| Quick question, writing | ✅ Native, fluid | ❌ Overkill | ⚠️ Task-oriented, not chat | ⚠️ Fine, less polished |
+| Steer a running CLI agent | ❌ | ✅ Inbox, push, approvals | ❌ | ❌ |
+| Delegate an autonomous task | ❌ | ⚠️ Host must be on | ✅ 24/7, cloud computer | ⚠️ Limited |
+| Long autonomous session | ⚠️ Limited on mobile | ✅ Agent runs on host | ✅ Independent cloud Bot | ⚠️ Web/app only |
+| Apps without API/MCP | ❌ | ❌ | ✅ Native browser | ❌ |
 
-Result: I'll probably keep a **minimal Claude Pro tier** just for the mobile app — even though my terminal moved to Grok. Irony: I left Max to save on terminal quota, and I may end up paying Anthropic again for my pocket.
+Result: I'll probably keep a **minimal Claude Pro tier** for pocket conversation — even if Grok Bot takes over delegation. Irony: I left Max to save on terminal quota, and now I pay Heavy + Ultra + residual Claude Pro.
 
 ### The rest of what I lost
 
@@ -213,13 +261,13 @@ The total cost far exceeds $300/month — especially if I keep Claude Pro for th
 
 ### What this says about the 2026 market
 
-The parallel with IDE history is striking — except for me, the IDE is the terminal. We no longer have "one AI tool" — we have an **AI stack**: **Herdr** for orchestration, **Moshi** for mobile, **Grok Build** and **Claude Code** for execution, **Grok Heavy** for thinking, **RTK** for efficiency, `aictx` for coherence.
+The parallel with IDE history is striking — except for me, the IDE is the terminal. We no longer have "one AI tool" — we have an **AI stack**: **Herdr** for terminal orchestration, **Moshi** for mobile CLI steering, **Grok Build** and **Claude Code** for execution, **Grok Bot** for cloud delegation, **Grok Heavy** for thinking, **Cursor Ultra** to unlock the Bots, **RTK** for efficiency, `aictx` for coherence.
 
-The vendors know it. Anthropic pushes Max — and a mobile app I already miss. xAI pushes Heavy and Grok Build. Herdr and Moshi fill the gap that neither Cursor nor native apps cover for CLI purists.
+The vendors know it. Anthropic pushes Max — and a mobile app I still miss for chat. xAI pushes Heavy, Grok Build, and Grok Bot. Cursor is no longer just an IDE: it's the identity infrastructure behind the Bots. Herdr and Moshi fill the terminal gap that neither Cursor nor native apps cover alone.
 
-My prediction: by end of 2026, the question won't be "Claude or Grok?" but "which model for which surface?" — terminal via Herdr, pocket via the native app or Moshi, thinking via Grok Heavy — and subscriptions that still haven't merged.
+My prediction: by end of 2026, the question won't be "Claude or Grok?" but "which model for which surface?" — terminal via Herdr, delegation via Grok Bot, steering via Moshi, thinking via Grok Heavy — and stacked subscriptions (Heavy + Ultra + Pro) that still haven't merged.
 
-In the meantime, I pay my bills, optimize my tokens with RTK, and check my iPhone every five minutes to see if Moshi has something — hoping the Grok app one day catches up to the Claude app.
+In the meantime, I pay my bills, optimize my tokens with RTK, and check my iPhone — Moshi for CLI approvals, Grok Bot for the morning watch, the Claude app for questions no Bot deserves.
 
 ---
 *Stay local. Stay secure. Live the Least Privilege Life.*

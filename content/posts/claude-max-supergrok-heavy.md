@@ -271,6 +271,3 @@ The vendors know it. Anthropic pushes Max — and a mobile app I still miss for 
 My prediction: by end of 2026, the question won't be "Claude or Grok?" but "which model for which surface?" — terminal via Herdr, delegation via Grok Bot, steering via Moshi, thinking via Grok Heavy — and stacked subscriptions (Heavy + Ultra + Pro) that still haven't merged.
 
 In the meantime, I pay my bills, orchestrate my agents with HivePilot, and check my iPhone — Moshi for CLI approvals, Grok Bot for the morning watch, the Claude app for questions no Bot deserves.
-
----
-*Stay local. Stay secure. Live the Least Privilege Life.*

@@ -267,6 +267,14 @@ ARTICLES: list[tuple[str, str, str, list[str], str, str]] = [
         "#f38ba8",   # Red
         ">>",
     ),
+    (
+        "omarchy-macbook-pro",
+        "Omarchy on MacBook Pro",
+        "Zero-friction Arch Linux on Apple T2 hardware.",
+        ["Linux", "Apple", "Arch"],
+        "#89dceb",   # Sky
+        ">",
+    ),
 ]
 
 
